@@ -1,1 +1,684 @@
+@ -0,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Gizlilik Politikası — Super Flashlight</title>
+<meta name="description" content="Privacy policy for the Super Flashlight Android app (com.ufukbagci.superflashlight). Gizlilik politikası.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1b1a;
+    --dim: #56514b;
+    --faint: #7d766e;
+    --line: #e5e1db;
+    --accent: #b26b00;
+    --panel: #faf8f5;
+    --fill-bg: #ffe9b8;
+    --fill-fg: #6b4600;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101010;
+      --fg: #ece8e1;
+      --dim: #a9a299;
+      --faint: #7d766e;
+      --line: #2a2725;
+      --accent: #ffc46b;
+      --panel: #191817;
+      --fill-bg: #4a3410;
+      --fill-fg: #ffd996;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 {
+    font-size: 1.1rem;
+    margin: 2.75rem 0 .75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 { font-size: .98rem; margin: 1.5rem 0 .4rem; }
+  p, li { color: var(--dim); }
+  li { margin: .3rem 0; }
+  strong { color: var(--fg); }
+  a { color: var(--accent); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .88em;
+    background: var(--panel);
+    padding: .1em .35em;
+    border-radius: 4px;
+  }
+  .meta { color: var(--faint); font-size: .9rem; margin: 0 0 1.75rem; }
+  .summary {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 1rem 1.15rem;
+  }
+  .summary p { margin: 0; }
+  .fill {
+    background: var(--fill-bg);
+    color: var(--fill-fg);
+    padding: .05em .4em;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .tablewrap { overflow-x: auto; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 32rem; font-size: .93rem; }
+  th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--fg); font-weight: 600; }
+  td { color: var(--dim); }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--faint); font-size: .88rem; }
 
+  /* --- Dil seçimi ---------------------------------------------------------
+     JavaScript'siz de çalışıyor: geçiş :target ile yapılıyor, betik yalnızca
+     tarayıcı dili Türkçeyse ilk açılışta TR'yi seçen bir kolaylık. Bir gizlilik
+     politikasının okunabilmesi betiğe bağlı olamaz. */
+  .langbar {
+    display: flex;
+    gap: .35rem;
+    margin: 0 0 2rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .25rem;
+    width: fit-content;
+  }
+  .langbar a {
+    text-decoration: none;
+    color: var(--dim);
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .3rem .9rem;
+    border-radius: 999px;
+  }
+  .langbar a:hover { color: var(--fg); }
+  /* :target sayfayı bölümün başına kaydırıyor ve dil çubuğu ekranın üstünde
+     kalıyordu. Bu pay, kaydırmanın çubuğu görünür bırakacak kadar yukarıda
+     durmasını sağlıyor — dilini yanlış seçen kullanıcı geri dönebilmeli. */
+  #en, #tr { scroll-margin-top: 8rem; }
+  #tr { display: none; }
+  #tr:target { display: block; }
+  body:has(#tr:target) #en { display: none; }
+  /* Etkin dilin düğmesi vurgulanıyor. */
+  .langbar a[href="#en"] { background: var(--panel); color: var(--fg); }
+  body:has(#tr:target) .langbar a[href="#en"] { background: none; color: var(--dim); }
+  body:has(#tr:target) .langbar a[href="#tr"] { background: var(--panel); color: var(--fg); }
+</style>
+</head>
+<body>
+<main>
+
+  <nav class="langbar" aria-label="Language / Dil">
+    <a href="#en" hreflang="en">English</a>
+    <a href="#tr" hreflang="tr">Türkçe</a>
+  </nav>
+
+  <!-- ==================================================================== -->
+  <!--  ENGLISH                                                             -->
+  <!-- ==================================================================== -->
+  <section id="en" lang="en">
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">
+    Super Flashlight — Android app, package <code>com.ufukbagci.superflashlight</code><br>
+    Last updated: <span class="fill">2026-08-02</span>
+  </p>
+
+  <div class="summary">
+    <p><strong>The short version.</strong> Super Flashlight does not ask for camera or
+    location permission, has no account or login, and never uploads what you type into
+    Morse mode. Three things do leave your device: optional crash reports, data used to
+    serve ads, and your purchase status if you buy Pro. You can switch crash reports off
+    in Settings, and buying Pro turns the advertising component off entirely — it is
+    never even started.</p>
+  </div>
+
+  <h2>1. Who is responsible</h2>
+  <p>
+    This app is published by <span class="fill">Ufuk Mobil Uygulama Atölyesi</span> ("we", "us"), the
+    data controller for the processing described here.
+  </p>
+  <p>
+    Privacy contact: <span class="fill">ufkbagci@gmail.com</span>. We answer privacy questions
+    and requests sent to this address.
+  </p>
+  <p>
+    This policy is published in English and Turkish. Where the two differ, the
+    <strong>English text governs</strong>.
+  </p>
+
+  <h2>2. What we do not collect</h2>
+  <p>Stated first, because it is the larger part of the answer:</p>
+  <ul>
+    <li><strong>No camera access.</strong> The flashlight uses Android's torch API
+      (<code>CameraManager.setTorchMode</code>), so the app does not request the
+      <code>CAMERA</code> permission and cannot see through your camera.</li>
+    <li><strong>No location permission.</strong> The app never requests
+      <code>ACCESS_FINE_LOCATION</code> or <code>ACCESS_COARSE_LOCATION</code> and calls no
+      location API. (An approximate, IP-derived location is nonetheless processed by the
+      advertising component — see section 4.)</li>
+    <li><strong>No account, no sign-in, no profile.</strong></li>
+    <li><strong>Morse text stays on the device.</strong> Whatever you type into Morse mode
+      is turned into light locally and is never transmitted or stored off-device.</li>
+    <li><strong>Your settings stay on the device.</strong> Preferences are written to
+      encrypted local storage and are never uploaded.</li>
+    <li>No contacts, calendar, photos, files, microphone, call logs, SMS or browsing history.</li>
+  </ul>
+
+  <h2>3. Crash reports (optional)</h2>
+  <p>
+    To find and fix crashes, the app can send diagnostic reports through
+    <strong>Google Firebase Crashlytics</strong>.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Data</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Crash logs and stack traces</td><td>Identify the fault</td></tr>
+        <tr><td>Device model, Android version, app version, session state</td><td>Reproduce the fault</td></tr>
+        <tr><td>Firebase Installation ID (a pseudonymous identifier)</td><td>Group multiple reports from the same installation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <strong>You can turn this off:</strong> Settings → Privacy → Crash reports. Turning it
+    off stops all collection from that point on. Google acts as our service provider for
+    this data; it is not shared with advertisers.
+  </p>
+
+  <h2>4. Advertising</h2>
+  <p>
+    The free version of the app shows a single banner at the bottom of the screen, served
+    by <strong>Google AdMob</strong> (the Google Mobile Ads SDK). The SDK collects and
+    <strong>shares</strong> the following with Google and its advertising partners:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Data type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Advertising ID, App set ID, account identifiers</td><td>Advertising, analytics, fraud prevention</td></tr>
+        <tr><td>App interactions (launches, taps, ad views)</td><td>Advertising, analytics, fraud prevention</td></tr>
+        <tr><td>Diagnostics and performance information</td><td>Analytics, fraud prevention</td></tr>
+        <tr><td>Approximate location, estimated from your IP address</td><td>Advertising, analytics</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    The approximate location above is worth spelling out: the app holds no location
+    permission and reads no location sensor. Your IP address is nonetheless enough for the
+    advertising system to estimate the general area you are in, and we disclose that
+    because it happens.
+  </p>
+  <p>
+    Google's handling of this data is governed by the
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. A list of the
+    advertising partners that may receive it is published at
+    <a href="https://support.google.com/admob/answer/9012903">Google's ad technology providers</a>.
+  </p>
+
+  <h3>Consent in the EEA, the UK and Switzerland</h3>
+  <p>
+    If you are in the European Economic Area, the United Kingdom or Switzerland, the app
+    shows a consent form from Google's User Messaging Platform before any personalised
+    advertising request is made. Your choice is stored on your device and honoured on later
+    launches. You can change it at any time from
+    <span class="fill">[PRIVACY OPTIONS PATH]</span>.
+  </p>
+
+  <h3>How to limit or stop advertising</h3>
+  <ul>
+    <li><strong>Buy Pro.</strong> If Pro is active, the advertising SDK is never
+      initialised at all: no consent form, no ad request, no identifier is read.</li>
+    <li><strong>Reset or delete your advertising ID</strong> in Android: Settings → Google →
+      All services → Ads.</li>
+    <li><strong>Withdraw consent</strong> (EEA/UK/CH) through the privacy options entry
+      point described above.</li>
+  </ul>
+
+  <h2>5. Purchases</h2>
+  <p>
+    Pro is a one-time purchase processed by <strong>Google Play Billing</strong>. Payment
+    details are entered in Google's own purchase dialog and never reach the app; we do not
+    see or store your card, address or billing information. The only thing the app keeps is
+    a single flag on your device recording whether Pro is active, which it re-checks with
+    Google Play on each launch so that refunds and account changes are reflected.
+  </p>
+
+  <h2>6. Children</h2>
+  <p>
+    This app is not directed at children. We do not knowingly collect personal data from
+    children under the age of 13 (or the equivalent minimum age in your country). If you
+    believe a child has provided us with personal data, contact us at the address in
+    section 1 and we will delete it.
+  </p>
+
+  <h2>7. Legal bases (GDPR)</h2>
+  <p>If the GDPR applies to you, we rely on the following legal bases:</p>
+  <ul>
+    <li><strong>Consent</strong> (Art. 6(1)(a)) — personalised advertising in the EEA,
+      the UK and Switzerland, given through the consent form described in section 4.</li>
+    <li><strong>Legitimate interests</strong> (Art. 6(1)(f)) — crash diagnostics (the
+      switch in Settings is how you object to it), fraud prevention and the security of
+      the advertising system, and non-personalised advertising where you declined
+      personalisation.</li>
+    <li><strong>Contract</strong> (Art. 6(1)(b)) — completing and validating a Pro purchase.</li>
+  </ul>
+
+  <h2>8. Your rights</h2>
+  <p>
+    Depending on where you live, you may have the right to access, correct, delete, port or
+    restrict the processing of your personal data, to object to processing, and to withdraw
+    consent at any time. Write to the address in section 1 and we will act on your request.
+  </p>
+  <p>
+    Because the app has no account system, we cannot look you up by name. To act on a
+    request about advertising or crash data we may need the identifier concerned — for
+    advertising, that is your advertising ID, which you can read in the Android settings
+    linked above.
+  </p>
+  <p>
+    You also have the right to lodge a complaint with your local data protection authority.
+    In Türkiye, that is the Personal Data Protection Authority (KVKK).
+  </p>
+
+  <h2>9. Residents of California and other US states</h2>
+  <p>
+    We do not sell personal information for money. However, the sharing of advertising
+    identifiers and app interaction data for personalised advertising described in section 4
+    may qualify as a "sale" or as "sharing for cross-context behavioural advertising" under
+    the CCPA/CPRA and similar state laws. You can opt out by resetting or deleting your
+    advertising ID, by enabling "Opt out of Ads Personalisation" in Android settings, or by
+    buying Pro, which removes the advertising component entirely.
+  </p>
+
+  <h2>10. Retention</h2>
+  <ul>
+    <li><strong>On your device:</strong> settings and the Pro flag remain until you clear the
+      app's data or uninstall it.</li>
+    <li><strong>Crash reports:</strong> retained by Firebase Crashlytics according to
+      Google's retention schedule.</li>
+    <li><strong>Advertising data:</strong> retained by Google under the
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; we hold no
+      independent copy of it.</li>
+  </ul>
+
+  <h2>11. Security</h2>
+  <p>
+    All data leaving the device is sent over TLS. Settings stored on the device are
+    encrypted with a key held in the Android Keystore. No data is stored on servers we
+    operate — we run none.
+  </p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>
+    If we change what the app collects, we will update this page and change the date at the
+    top. Material changes to advertising or data collection will also be reflected in the
+    app's Data safety section on Google Play.
+  </p>
+
+  <h2>13. Contact</h2>
+  <p>
+    <span class="fill">Ufuk Mobil Uygulama Atölyesi</span><br>
+    <span class="fill">ufkbagci@gmail.com</span><br>
+    <span class="fill">[POSTAL ADDRESS — Play Console'daki kayıtlı adresin tamamı]</span>
+  </p>
+
+  </section>
+
+  <!-- ==================================================================== -->
+  <!--  TÜRKÇE                                                              -->
+  <!-- ==================================================================== -->
+  <section id="tr" lang="tr">
+
+  <h1>Gizlilik Politikası</h1>
+  <p class="meta">
+    Super Flashlight — Android uygulaması, paket <code>com.ufukbagci.superflashlight</code><br>
+    Son güncelleme: <span class="fill">2026-08-02</span>
+  </p>
+
+  <div class="summary">
+    <p><strong>Kısa hâli.</strong> Super Flashlight kamera veya konum izni istemez, hesap
+    ya da giriş içermez ve Mors ekranına yazdıklarınızı hiçbir yere göndermez. Cihazdan
+    çıkan üç şey var: isteğe bağlı çökme raporları, reklam sunmak için kullanılan veriler
+    ve Pro satın alırsanız satın alma durumunuz. Çökme raporlarını Ayarlar'dan
+    kapatabilirsiniz; Pro satın almak ise reklam bileşenini tamamen devre dışı bırakır —
+    o durumda hiç başlatılmaz.</p>
+  </div>
+
+  <h2>1. Sorumlu taraf</h2>
+  <p>
+    Bu uygulama <span class="fill">Ufuk Mobil Uygulama Atölyesi</span> tarafından yayımlanmaktadır
+    ("biz"); burada anlatılan işleme faaliyetlerinin veri sorumlusu bu taraftır.
+  </p>
+  <p>
+    Gizlilik iletişimi: <span class="fill">ufkbagci@gmail.com</span>. Gizlilikle ilgili soru
+    ve talepler bu adrese iletildiğinde yanıtlanır.
+  </p>
+  <p>
+    Bu politika İngilizce ve Türkçe olarak yayımlanmıştır. İki metin arasında farklılık
+    olması hâlinde <strong>İngilizce metin esas alınır</strong>.
+  </p>
+
+  <h2>2. Toplamadıklarımız</h2>
+  <p>Önce bunlar, çünkü cevabın büyük kısmı burada:</p>
+  <ul>
+    <li><strong>Kamera erişimi yok.</strong> Fener, Android'in fener API'sini
+      (<code>CameraManager.setTorchMode</code>) kullanır; uygulama <code>CAMERA</code>
+      iznini istemez ve kameranızdan görüntü alamaz.</li>
+    <li><strong>Konum izni yok.</strong> Uygulama <code>ACCESS_FINE_LOCATION</code> veya
+      <code>ACCESS_COARSE_LOCATION</code> izinlerini hiç istemez ve hiçbir konum API'si
+      çağırmaz. (Buna rağmen reklam bileşeni IP adresinden türetilen yaklaşık bir konum
+      işler — bkz. 4. bölüm.)</li>
+    <li><strong>Hesap, giriş veya profil yok.</strong></li>
+    <li><strong>Mors metni cihazda kalır.</strong> Mors ekranına yazdığınız her şey cihazda
+      ışığa çevrilir; hiçbir yere gönderilmez ve cihaz dışında saklanmaz.</li>
+    <li><strong>Ayarlarınız cihazda kalır.</strong> Tercihler şifreli yerel depolamaya
+      yazılır ve hiçbir yere yüklenmez.</li>
+    <li>Kişiler, takvim, fotoğraflar, dosyalar, mikrofon, arama kayıtları, SMS veya
+      gezinme geçmişi alınmaz.</li>
+  </ul>
+
+  <h2>3. Çökme raporları (isteğe bağlı)</h2>
+  <p>
+    Çökmeleri bulup düzeltmek için uygulama <strong>Google Firebase Crashlytics</strong>
+    üzerinden tanılama raporu gönderebilir.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Veri</th><th>Amaç</th></tr></thead>
+      <tbody>
+        <tr><td>Çökme kayıtları ve yığın izleri</td><td>Hatayı tespit etmek</td></tr>
+        <tr><td>Cihaz modeli, Android sürümü, uygulama sürümü, oturum durumu</td><td>Hatayı yeniden üretmek</td></tr>
+        <tr><td>Firebase kurulum kimliği (takma adlı bir tanımlayıcı)</td><td>Aynı kurulumdan gelen raporları gruplamak</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <strong>Kapatabilirsiniz:</strong> Ayarlar → Gizlilik → Çökme raporları. Kapatıldığı
+    andan itibaren toplama tamamen durur. Google bu veri bakımından hizmet sağlayıcımızdır;
+    veri reklamverenlerle paylaşılmaz.
+  </p>
+
+  <h2>4. Reklam</h2>
+  <p>
+    Uygulamanın ücretsiz sürümü, ekranın altında <strong>Google AdMob</strong> (Google
+    Mobile Ads SDK) tarafından sunulan tek bir banner gösterir. SDK aşağıdakileri toplar ve
+    Google ile reklam iş ortaklarına <strong>aktarır</strong>:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Veri türü</th><th>Amaç</th></tr></thead>
+      <tbody>
+        <tr><td>Reklam kimliği, App set ID, hesap tanımlayıcıları</td><td>Reklam, analiz, sahtekârlık önleme</td></tr>
+        <tr><td>Uygulama etkileşimleri (açılış, dokunma, reklam görüntüleme)</td><td>Reklam, analiz, sahtekârlık önleme</td></tr>
+        <tr><td>Tanılama ve performans bilgileri</td><td>Analiz, sahtekârlık önleme</td></tr>
+        <tr><td>IP adresinden tahmin edilen yaklaşık konum</td><td>Reklam, analiz</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Yukarıdaki yaklaşık konumu açıkça belirtmek gerekiyor: uygulamanın konum izni yoktur ve
+    hiçbir konum sensörü okumaz. Yine de IP adresiniz, reklam sisteminin bulunduğunuz genel
+    bölgeyi tahmin etmesine yetiyor; olduğu için beyan ediyoruz.
+  </p>
+  <p>
+    Google'ın bu verileri işleyişi
+    <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>'na tabidir.
+    Verileri alabilecek reklam iş ortaklarının listesi
+    <a href="https://support.google.com/admob/answer/9012903">Google reklam teknolojisi sağlayıcıları</a>
+    sayfasında yayımlanmaktadır.
+  </p>
+
+  <h3>AEA, Birleşik Krallık ve İsviçre'de onay</h3>
+  <p>
+    Avrupa Ekonomik Alanı, Birleşik Krallık veya İsviçre'deyseniz, uygulama kişiselleştirilmiş
+    herhangi bir reklam isteği yapılmadan önce Google User Messaging Platform onay formunu
+    gösterir. Seçiminiz cihazınızda saklanır ve sonraki açılışlarda dikkate alınır. Bu
+    seçimi dilediğiniz zaman <span class="fill">[PRIVACY OPTIONS PATH]</span> üzerinden
+    değiştirebilirsiniz.
+  </p>
+
+  <h3>Reklamı sınırlamanın veya durdurmanın yolları</h3>
+  <ul>
+    <li><strong>Pro satın almak.</strong> Pro etkinse reklam SDK'sı hiç başlatılmaz: onay
+      formu çıkmaz, reklam isteği yapılmaz, hiçbir tanımlayıcı okunmaz.</li>
+    <li><strong>Reklam kimliğinizi sıfırlamak veya silmek:</strong> Android'de Ayarlar →
+      Google → Tüm hizmetler → Reklamlar.</li>
+    <li><strong>Onayı geri çekmek</strong> (AEA/BK/İsviçre) — yukarıda belirtilen gizlilik
+      seçenekleri girişinden.</li>
+  </ul>
+
+  <h2>5. Satın almalar</h2>
+  <p>
+    Pro, <strong>Google Play Billing</strong> üzerinden işlenen tek seferlik bir satın
+    almadır. Ödeme bilgileri Google'ın kendi satın alma penceresine girilir ve uygulamaya
+    hiç ulaşmaz; kart, adres veya fatura bilgilerinizi görmez ve saklamayız. Uygulamanın
+    sakladığı tek şey, cihazınızda Pro'nun etkin olup olmadığını tutan bir işarettir; bu
+    değer her açılışta Google Play'e yeniden sorulur, böylece iadeler ve hesap değişiklikleri
+    yansır.
+  </p>
+
+  <h2>6. Çocuklar</h2>
+  <p>
+    Bu uygulama çocuklara yönelik değildir. 13 yaşın (veya ülkenizdeki eşdeğer asgari yaşın)
+    altındaki çocuklardan bilerek kişisel veri toplamayız. Bir çocuğun bize kişisel veri
+    verdiğini düşünüyorsanız 1. bölümdeki adresten bize ulaşın, veriyi sileriz.
+  </p>
+
+  <h2>7. Hukuki dayanaklar (GDPR)</h2>
+  <p>GDPR size uygulanıyorsa dayandığımız hukuki sebepler şunlardır:</p>
+  <ul>
+    <li><strong>Açık rıza</strong> (m. 6/1-a) — AEA, Birleşik Krallık ve İsviçre'de
+      kişiselleştirilmiş reklam; 4. bölümdeki onay formuyla alınır.</li>
+    <li><strong>Meşru menfaat</strong> (m. 6/1-f) — çökme tanılaması (Ayarlar'daki anahtar
+      buna itiraz etmenin yoludur), sahtekârlık önleme ve reklam sisteminin güvenliği;
+      kişiselleştirmeyi reddettiğinizde kişiselleştirilmemiş reklam.</li>
+    <li><strong>Sözleşme</strong> (m. 6/1-b) — Pro satın almasının tamamlanması ve
+      doğrulanması.</li>
+  </ul>
+
+  <h2>8. Haklarınız</h2>
+  <p>
+    Bulunduğunuz yere göre; kişisel verilerinize erişme, düzeltilmesini, silinmesini,
+    taşınmasını veya işlenmesinin kısıtlanmasını isteme, işlemeye itiraz etme ve rızanızı
+    dilediğiniz zaman geri çekme haklarına sahip olabilirsiniz. 1. bölümdeki adrese yazın,
+    talebinizi yerine getirelim.
+  </p>
+  <p>
+    Uygulamada hesap sistemi bulunmadığından sizi adınızla bulmamız mümkün değildir. Reklam
+    veya çökme verisine ilişkin bir talebi işleyebilmek için ilgili tanımlayıcıya ihtiyaç
+    duyabiliriz; reklam tarafında bu, yukarıda bağlantısı verilen Android ayarlarından
+    okuyabileceğiniz reklam kimliğinizdir.
+  </p>
+  <p>
+    Ayrıca yerel veri koruma otoritesine şikâyette bulunma hakkınız vardır. Türkiye'de bu
+    kurum Kişisel Verileri Koruma Kurumu'dur (KVKK).
+  </p>
+
+  <h2>9. Kaliforniya ve diğer ABD eyaletleri sakinleri</h2>
+  <p>
+    Kişisel bilgileri para karşılığı satmıyoruz. Bununla birlikte, 4. bölümde anlatılan
+    kişiselleştirilmiş reklam amaçlı reklam tanımlayıcısı ve uygulama etkileşimi paylaşımı,
+    CCPA/CPRA ve benzeri eyalet mevzuatı bakımından "satış" veya "bağlamlar arası davranışsal
+    reklam için paylaşım" sayılabilir. Reklam kimliğinizi sıfırlayarak veya silerek, Android
+    ayarlarındaki "Reklam kişiselleştirmesini devre dışı bırak" seçeneğini etkinleştirerek ya
+    da reklam bileşenini tamamen kaldıran Pro'yu satın alarak bundan çıkabilirsiniz.
+  </p>
+
+  <h2>10. Saklama süreleri</h2>
+  <ul>
+    <li><strong>Cihazınızda:</strong> ayarlar ve Pro işareti, uygulama verilerini silene ya
+      da uygulamayı kaldırana kadar durur.</li>
+    <li><strong>Çökme raporları:</strong> Firebase Crashlytics tarafından Google'ın saklama
+      takvimine göre tutulur.</li>
+    <li><strong>Reklam verileri:</strong> Google tarafından
+      <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> uyarınca
+      tutulur; bizde ayrı bir kopyası bulunmaz.</li>
+  </ul>
+
+  <h2>11. Güvenlik</h2>
+  <p>
+    Cihazdan çıkan tüm veriler TLS üzerinden gönderilir. Cihazda saklanan ayarlar, Android
+    Keystore'da tutulan bir anahtarla şifrelenir. İşlettiğimiz sunucularda hiçbir veri
+    saklanmaz — çünkü sunucu işletmiyoruz.
+  </p>
+
+  <h2>12. Bu politikadaki değişiklikler</h2>
+  <p>
+    Uygulamanın topladığı veriler değişirse bu sayfayı günceller ve üstteki tarihi
+    değiştiririz. Reklam veya veri toplamaya ilişkin esaslı değişiklikler, uygulamanın
+    Google Play'deki Veri güvenliği bölümüne de yansıtılır.
+  </p>
+
+  <h2>13. İletişim</h2>
+  <p>
+    <span class="fill">Ufuk Mobil Uygulama Atölyesi</span><br>
+    <span class="fill">ufkbagci@gmail.com</span><br>
+    <span class="fill">[POSTAL ADDRESS — Play Console'daki kayıtlı adresin tamamı]</span>
+  </p>
+
+
+  <h2>Ek — KVKK Aydınlatma Metni</h2>
+  <p>
+    6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi ve Aydınlatma
+    Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ
+    uyarınca hazırlanmıştır. Bu ek <strong>yeni bir işleme faaliyeti eklemez</strong>;
+    yukarıdaki bölümlerde anlatılanların KVKK terimleriyle karşılığıdır.
+  </p>
+
+  <h3>Veri sorumlusu</h3>
+  <p>
+    <span class="fill">Ufuk Mobil Uygulama Atölyesi</span><br>
+    <span class="fill">[POSTAL ADDRESS — Play Console'daki kayıtlı adresin tamamı]</span><br>
+    <span class="fill">ufkbagci@gmail.com</span>
+  </p>
+
+  <h3>İşlenen kişisel veriler, işleme amaçları ve hukuki sebepleri</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Veri</th><th>Amaç</th><th>Hukuki sebep (KVKK m. 5)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Çökme kaydı, cihaz modeli, Android sürümü, oturum durumu, Firebase kurulum kimliği</td>
+          <td>Uygulama hatalarının tespiti ve giderilmesi</td>
+          <td>Meşru menfaat — m. 5/2-f. Ayarlar → Gizlilik'ten kapatılabilir.</td>
+        </tr>
+        <tr>
+          <td>Reklam kimliği, App set ID, hesap tanımlayıcıları, uygulama etkileşimleri,
+            IP adresinden türetilen yaklaşık konum</td>
+          <td>Reklam gösterimi ve ölçümü, sahtekârlık önleme</td>
+          <td>AEA, Birleşik Krallık ve İsviçre'de <strong>açık rıza</strong> — m. 5/1;
+            onay formuyla alınır. Bu bölgelerin dışında uygulama içinde ayrı bir onay
+            ekranı gösterilmemekte, işleme meşru menfaat — m. 5/2-f kapsamında
+            yürütülmektedir. Pro satın alındığında reklam bileşeni hiç çalıştırılmaz.</td>
+        </tr>
+        <tr>
+          <td>Satın alma durumu (Pro)</td>
+          <td>Satın almanın doğrulanması ve sürdürülmesi</td>
+          <td>Sözleşmenin ifası — m. 5/2-c</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Kişisel veri toplamanın yöntemi</h3>
+  <p>
+    Veriler yalnızca otomatik yollarla, uygulamaya gömülü Google yazılım geliştirme
+    kitleri aracılığıyla toplanır. Kullanıcıdan form, kayıt veya benzeri bir yolla veri
+    istenmez; uygulamada hesap ve giriş bulunmamaktadır. Kamera ve konum izni talep
+    edilmez.
+  </p>
+
+  <h3>Aktarılan taraflar ve yurt dışına aktarım</h3>
+  <p>
+    Veriler Google Ireland Limited ve Google LLC'ye; reklam tarafında ayrıca Google'ın
+    <a href="https://support.google.com/admob/answer/9012903">reklam teknolojisi
+    sağlayıcıları</a> listesinde yer alan iş ortaklarına aktarılabilmektedir. Bu
+    şirketlerin sunucuları yurt dışında bulunduğundan, aktarım KVKK m. 9 anlamında
+    <strong>yurt dışına aktarım</strong> niteliğindedir.
+  </p>
+  <p>
+    Aktarımı sınırlandırmanın yolları: Pro satın almak (reklam bileşeni hiç
+    çalıştırılmaz), Ayarlar'dan çökme raporlarını kapatmak, Android ayarlarından reklam
+    kimliğini sıfırlamak veya silmek.
+  </p>
+
+  <h3>İlgili kişinin hakları (KVKK m. 11)</h3>
+  <p>Kanunun 11. maddesi uyarınca veri sorumlusuna başvurarak şunları talep edebilirsiniz:</p>
+  <ul>
+    <li>Kişisel verinizin işlenip işlenmediğini öğrenme,</li>
+    <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+    <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+    <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+    <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+    <li>Kanunun 7. maddesindeki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+    <li>Düzeltme, silme ve yok etme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini
+      isteme,</li>
+    <li>Münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonuç
+      ortaya çıkmasına itiraz etme,</li>
+    <li>Kanuna aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini
+      talep etme.</li>
+  </ul>
+
+  <h3>Başvuru usulü</h3>
+  <p>
+    Talepleriniz <span class="fill">ufkbagci@gmail.com</span> adresine iletilebilir. Veri
+    Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ uyarınca başvurunun yazılı olarak
+    ya da kayıtlı elektronik posta (KEP), güvenli elektronik imza, mobil imza veya daha
+    önce bize bildirdiğiniz ve sistemimizde kayıtlı bulunan elektronik posta adresi
+    üzerinden yapılması gerekir. Başvurular en geç <strong>otuz gün</strong> içinde
+    sonuçlandırılır.
+  </p>
+  <p>
+    Uygulamada hesap bulunmadığından sizi adınızla eşleştiremeyiz. Reklam verisine ilişkin
+    taleplerde reklam kimliğinizin, çökme verisine ilişkin taleplerde ise talebin
+    ilgilendiği dönemin bildirilmesi gerekir.
+  </p>
+  <p>
+    Başvurunuzun reddedilmesi, verilen cevabı yetersiz bulmanız veya süresinde cevap
+    verilmemesi hâlinde; cevabı öğrendiğiniz tarihten itibaren otuz ve her hâlde başvuru
+    tarihinden itibaren altmış gün içinde
+    <a href="https://www.kvkk.gov.tr">Kişisel Verileri Koruma Kurulu</a>'na şikâyette
+    bulunabilirsiniz.
+  </p>
+
+  </section>
+
+  <footer>
+    Super Flashlight · <code>com.ufukbagci.superflashlight</code>
+  </footer>
+
+</main>
+
+<script>
+  // Yalnızca kolaylık: tarayıcı dili Türkçeyse ve kullanıcı henüz bir dil
+  // seçmediyse Türkçeyi aç. Geçişin kendisi CSS :target ile çalıştığı için
+  // bu betik olmasa da sayfa iki dilde de okunabilir durumda kalıyor.
+  (function () {
+    var lang = (navigator.language || "").toLowerCase();
+    if (!location.hash && lang.indexOf("tr") === 0) {
+      location.replace("#tr");
+    }
+    function sync() {
+      document.documentElement.lang = location.hash === "#tr" ? "tr" : "en";
+    }
+    window.addEventListener("hashchange", sync);
+    sync();
+  })();
+</script>
+
+</body>
+</html>
