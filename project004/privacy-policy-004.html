@@ -603,6 +603,9 @@
 </main>
 
 <script>
+  // Yalnızca kolaylık: tarayıcı dili Türkçeyse ve kullanıcı henüz bir dil
+  // seçmediyse Türkçeyi aç. Geçişin kendisi CSS :target ile çalıştığı için
+  // bu betik olmasa da sayfa iki dilde de okunabilir durumda kalıyor.
   (function () {
     var lang = (navigator.language || "").toLowerCase();
     if (!location.hash && lang.indexOf("tr") === 0) {
