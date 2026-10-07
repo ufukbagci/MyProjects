@@ -111,9 +111,10 @@
   /* :target sayfayı bölümün başına kaydırıyor ve dil çubuğu ekranın üstünde
      kalıyordu. Bu pay, kaydırmanın çubuğu görünür bırakacak kadar yukarıda
      durmasını sağlıyor — dilini yanlış seçen kullanıcı geri dönebilmeli. */
-  #en, #tr { scroll-margin-top: 8rem; }
+  #en, #tr, #delete, #sil { scroll-margin-top: 8rem; }
   #tr { display: none; }
-  #tr:target { display: block; }
+  #tr:target, #tr:has(#sil:target) { display: block; }
+  body:has(#sil:target) #en { display: none; }
   body:has(#tr:target) #en { display: none; }
   /* Etkin dilin düğmesi vurgulanıyor. */
   .langbar a[href="#en"] { background: var(--panel); color: var(--fg); }
@@ -148,6 +149,13 @@
     Google Firebase. Your saved measurements, settings and calibration stay in the app's
     private storage on your device and are never transmitted by the app.</p>
   </div>
+
+  <h2 id="delete">Deleting your data</h2>
+  <p>Bubble Level (Ufuk Mobil Uygulama Atölyesi) has no accounts, so there is nothing to sign in to or close. To delete your data:</p>
+  <ol>
+    <li><strong>Data on your device</strong> (saved measurements, settings, calibration): delete measurements in the app, or open <em>Settings → Apps → Bubble Level → Storage → Clear storage</em>, or uninstall the app. This removes it immediately.</li>
+    <li><strong>Usage statistics and crash reports</strong> held in Firebase: email <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span> with the subject "Bubble Level data deletion", your app version and the approximate date you used the app. We delete what we can identify within 30 days. Otherwise this data is deleted automatically: crash reports after 90 days, usage statistics after at most 14 months.</li>
+  </ol>
 
   <h2>1. Who is responsible</h2>
   <p>
@@ -379,6 +387,13 @@
     üzerinden. Kaydettiğiniz ölçümler, ayarlarınız ve kalibrasyonunuz cihazınızdaki
     uygulamaya özel depolamada kalır ve uygulama tarafından hiçbir zaman gönderilmez.</p>
   </div>
+
+  <h2 id="sil">Verilerinizi silme</h2>
+  <p>Su Terazisi'nde (Ufuk Mobil Uygulama Atölyesi) hesap yoktur; kapatılacak bir hesap da yoktur. Verilerinizi silmek için:</p>
+  <ol>
+    <li><strong>Cihazınızdaki veriler</strong> (kayıtlı ölçümler, ayarlar, kalibrasyon): ölçümleri uygulama içinden silin ya da <em>Ayarlar → Uygulamalar → Su Terazisi → Depolama → Depolamayı temizle</em> yolunu izleyin ya da uygulamayı kaldırın. Veriler hemen silinir.</li>
+    <li><strong>Firebase'deki kullanım istatistikleri ve çökme raporları</strong>: <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span> adresine "Su Terazisi veri silme" konulu, uygulama sürümünü ve uygulamayı kullandığınız yaklaşık tarihi içeren bir e-posta gönderin. Tespit edebildiklerimizi 30 gün içinde sileriz. Aksi hâlde bu veriler kendiliğinden silinir: çökme raporları 90 gün, kullanım istatistikleri en fazla 14 ay sonra.</li>
+  </ol>
 
   <h2>1. Sorumlu taraf</h2>
   <p>
