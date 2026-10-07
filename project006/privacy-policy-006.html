@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Gizlilik Politikası — Bubble Level / Su Terazisi</title>
+<meta name="description" content="Privacy policy for the Bubble Level (Su Terazisi) Android app (com.ub.bubblelevel). Gizlilik politikası.">
+
+<style>
+  :root {
+    --bg: #DDE3D2;
+    --panel: #EAEFE1;
+    --line: #C0C8B2;
+    --fg: #15160F;
+    --dim: #474A3B;
+    --faint: #868B77;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E0F0A;
+      --panel: #181A12;
+      --line: #333726;
+      --fg: #E7ECDC;
+      --dim: #AFB6A0;
+      --faint: #7C8371;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; font-family: "Segoe UI", -apple-system, sans-serif; font-weight: 700; }
+  h2 {
+    font-size: 1.1rem;
+    margin: 2.75rem 0 .75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 { font-size: .98rem; margin: 1.5rem 0 .4rem; }
+  p, li { color: var(--dim); }
+  li { margin: .3rem 0; }
+  strong { color: var(--fg); }
+  /* Vurgu rengi yok: bağlantılar mürekkep renginde, tek ayrım altı çizili
+     olmaları. LevelColors.kt'nin "vurgu rengi yok, mürekkep-üzerine-kâğıt"
+     kuralı burada da geçerli. */
+  a { color: var(--fg); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--dim); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .88em;
+    background: var(--panel);
+    padding: .1em .35em;
+    border-radius: 4px;
+  }
+  .meta { color: var(--faint); font-size: .9rem; margin: 0 0 1.75rem; }
+  .summary {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--fg);
+    border-radius: 8px;
+    padding: 1rem 1.15rem;
+  }
+  .summary p { margin: 0; }
+  /* Sabit gerçekler (e-posta, tarih, şirket adı) — uygulamanın kendi "dolu
+     alan" diliyle işaretleniyor: mürekkep dolgu, kâğıt yazı. Renk değil,
+     paletin ters çevrilmiş hâli — ters palet ile aynı fikir. */
+  .fill {
+    background: var(--fg);
+    color: var(--bg);
+    padding: .05em .45em;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 600;
+    font-size: .92em;
+  }
+  .tablewrap { overflow-x: auto; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 32rem; font-size: .93rem; }
+  th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--fg); font-weight: 600; }
+  td { color: var(--dim); }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--faint); font-size: .88rem; }
+
+  /* --- Dil seçimi ---------------------------------------------------------
+     JavaScript'siz de çalışıyor: geçiş :target ile yapılıyor, betik yalnızca
+     tarayıcı dili Türkçeyse ilk açılışta TR'yi seçen bir kolaylık. Bir gizlilik
+     politikasının okunabilmesi betiğe bağlı olamaz. */
+  .langbar {
+    display: flex;
+    gap: .35rem;
+    margin: 0 0 2rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .25rem;
+    width: fit-content;
+  }
+  .langbar a {
+    text-decoration: none;
+    color: var(--dim);
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .3rem .9rem;
+    border-radius: 999px;
+  }
+  .langbar a:hover { color: var(--fg); }
+  /* :target sayfayı bölümün başına kaydırıyor ve dil çubuğu ekranın üstünde
+     kalıyordu. Bu pay, kaydırmanın çubuğu görünür bırakacak kadar yukarıda
+     durmasını sağlıyor — dilini yanlış seçen kullanıcı geri dönebilmeli. */
+  #en, #tr { scroll-margin-top: 8rem; }
+  #tr { display: none; }
+  #tr:target { display: block; }
+  body:has(#tr:target) #en { display: none; }
+  /* Etkin dilin düğmesi vurgulanıyor. */
+  .langbar a[href="#en"] { background: var(--panel); color: var(--fg); }
+  body:has(#tr:target) .langbar a[href="#en"] { background: none; color: var(--dim); }
+  body:has(#tr:target) .langbar a[href="#tr"] { background: var(--panel); color: var(--fg); }
+</style>
+</head>
+<body>
+<main>
+
+  <nav class="langbar" aria-label="Language / Dil">
+    <a href="#en" hreflang="en">English</a>
+    <a href="#tr" hreflang="tr">Türkçe</a>
+  </nav>
+
+  <!-- ==================================================================== -->
+  <!--  ENGLISH                                                             -->
+  <!-- ==================================================================== -->
+  <section id="en" lang="en">
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">
+    Bubble Level — Android app, package <code>com.ub.bubblelevel</code><br>
+    Last updated: <span class="fill">2026-10-07</span>
+  </p>
+
+  <div class="summary">
+    <p><strong>The short version.</strong> Bubble Level has no account and no ads, and it
+    never uses the advertising ID. Two things leave your device: anonymous
+    <strong>usage statistics</strong> (which features are used — never the angles you
+    measure or the names you give them) and <strong>crash reports</strong>, both through
+    Google Firebase. Your saved measurements, settings and calibration stay in the app's
+    private storage on your device and are never transmitted by the app.</p>
+  </div>
+
+  <h2>1. Who is responsible</h2>
+  <p>
+    This app is published by <span class="fill">Ufuk Mobil Uygulama Atölyesi</span> ("we", "us"), the
+    data controller for the processing described here.
+  </p>
+  <p>
+    Privacy contact: <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span>. We answer privacy questions
+    and requests sent to this address.
+  </p>
+  <p>
+    This policy is published in English and Turkish. Where the two differ, the
+    <strong>English text governs</strong>.
+  </p>
+
+  <h2>2. What we do not collect</h2>
+  <ul>
+    <li><strong>No account, no sign-in, no profile.</strong></li>
+    <li><strong>No advertising and no advertising ID.</strong> The app contains no ad SDK.
+      The advertising-ID permissions that Firebase would normally add are removed from the
+      app, advertising-ID collection is switched off and ad-personalisation signals are
+      disabled.</li>
+    <li>No camera, no location, no contacts, no microphone, no files outside the app's
+      own storage. The app reads the device's motion sensors (accelerometer / gravity) to
+      show the level; those readings are processed on the device and are never sent
+      anywhere.</li>
+    <li>Your saved measurements, the names you give them, your settings and your
+      calibration are never transmitted — see section 3.</li>
+  </ul>
+
+  <h2>3. What is stored on your device</h2>
+  <p>
+    Not collecting data is not the same as not storing it. The app writes to its own
+    private storage, sandboxed by Android and inaccessible to other apps:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>What</th><th>Where</th><th>Contents</th></tr></thead>
+      <tbody>
+        <tr><td>Saved measurements</td><td>Local database (Room)</td><td>Tool and mode, reference edge, angles, unit, whether it was a relative reading, date, the name you gave it</td></tr>
+        <tr><td>Preferences</td><td>Local storage (DataStore)</td><td>Unit, tolerance, decimals, theme and colours, sound / vibration / screen-on options, language</td></tr>
+        <tr><td>Calibration</td><td>Local storage (DataStore)</td><td>Sensor offsets measured during calibration, calibration profile</td></tr>
+        <tr><td>Review prompt counters</td><td>Local storage (DataStore)</td><td>How many measurements you have saved, how many distinct days you opened the app, when you were last asked to rate it</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    None of this ever leaves your device through the app. You can review and delete your
+    saved measurements from inside the app at any time. Sharing a measurement or exporting
+    them as CSV is something <em>you</em> do, through Android's own share sheet, to an app
+    you choose — the app itself never transmits them.
+  </p>
+
+  <h2>4. Usage statistics</h2>
+  <p>
+    To learn which features are actually used, the app sends a small, fixed set of events
+    to <strong>Google Firebase Analytics</strong>:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Event</th><th>What it carries</th></tr></thead>
+      <tbody>
+        <tr><td>A screen was opened</td><td>The screen's name (for example "settings")</td></tr>
+        <tr><td>A measurement was saved</td><td>Mode and unit — <strong>not</strong> the measured value or its name</td></tr>
+        <tr><td>A calibration was saved</td><td>Which edge and which calibration profile</td></tr>
+        <tr><td>The Pro screen was shown / a purchase was started</td><td>Which Pro feature it was about</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Firebase associates these events with a pseudonymous app-instance identifier and
+    adds basic technical information it collects automatically (device model, Android
+    version, app version, country derived from the network, and session timing). The
+    data is used only in aggregate, to decide what to improve. It is not used for
+    advertising, not combined with an advertising ID and not used to build a profile of
+    you.
+  </p>
+
+  <h2>5. Crash reports</h2>
+  <p>
+    If the app fails, it can send a diagnostic report through <strong>Google Firebase
+    Crashlytics</strong>.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Data</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Crash logs and stack traces</td><td>Identify the fault</td></tr>
+        <tr><td>Device model, Android version, app version</td><td>Reproduce the fault</td></tr>
+        <tr><td>Firebase Installation ID (a pseudonymous identifier)</td><td>Group multiple reports from the same installation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Google acts as our service provider for the data in sections 4 and 5 under the
+    <a href="https://firebase.google.com/support/privacy">Firebase terms</a>; it is not
+    sold or shared with advertisers, and Google's handling of it is also governed by the
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. There is
+    currently no in-app switch for statistics or crash reports; uninstalling the app stops
+    both immediately.
+  </p>
+
+  <h2>6. Purchases</h2>
+  <p>
+    The optional Pro upgrade is a one-time purchase sold through <strong>Google Play
+    Billing</strong>. Payment is handled entirely by Google Play under its own terms; the
+    app never sees or stores your name, card or other payment details. It only asks Google
+    Play whether Pro has been purchased on your account, so that the Pro features can be
+    unlocked.
+  </p>
+
+  <h2>7. Android's own backup</h2>
+  <p>
+    The app allows Android's built-in backup (<code>allowBackup</code>), so if you have
+    backup enabled on your device, Android may include the app's data in your device
+    backup to your own Google account. This is a platform feature, not something we do
+    or have access to — we operate no servers and receive nothing from it. You can turn
+    device backup off in your phone's own settings if you would rather it not happen.
+  </p>
+
+  <h2>8. Google Play's rating prompt</h2>
+  <p>
+    The app may occasionally ask you to rate it, using Google's official
+    <strong>Play In-App Review</strong> component. That prompt and the rating flow are
+    handled entirely by the Play Store app already installed on your device; we receive
+    nothing from it beyond the public rating and review you choose to post.
+  </p>
+
+  <h2>9. Permissions</h2>
+  <ul>
+    <li><code>VIBRATE</code> — the optional vibration when the device is level.</li>
+    <li><code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> — sending the
+      statistics and crash reports in sections 4 and 5, and talking to Google Play for
+      purchases.</li>
+    <li><code>BILLING</code> — Google Play purchases (section 6).</li>
+  </ul>
+  <p>The app does not request camera, location, contacts, microphone or storage permissions.</p>
+
+  <h2>10. Children</h2>
+  <p>
+    This app is not directed at children. We do not knowingly collect personal data from
+    children under the age of 13 (or the equivalent minimum age in your country); the
+    statistics and crash reports contain no information that identifies who was using the
+    app. If you believe a child has provided us with personal data, contact us at the
+    address in section 1 and we will delete it.
+  </p>
+
+  <h2>11. Legal bases (GDPR) and your rights</h2>
+  <p>
+    For the usage statistics and crash data in sections 4 and 5, we rely on
+    <strong>legitimate interests</strong> (Art. 6(1)(f) GDPR): understanding which
+    features are used and diagnosing faults in software we publish are narrow, expected
+    purposes, and the data is pseudonymous and never used for advertising. For purchases
+    (section 6), the basis is the <strong>performance of a contract</strong>
+    (Art. 6(1)(b)).
+  </p>
+  <p>
+    The measurements, settings and calibration described in section 3 never reach us at
+    all — they exist solely on your device, under your control. You can delete them in the
+    app or through Android's <em>Settings → Apps → Bubble Level → Clear storage</em>, which
+    removes all of it at once. Uninstalling the app does the same.
+  </p>
+  <p>
+    For the statistics and crash data, you may have the right to access, delete or object
+    to its processing. Because the app has no account system, we cannot link this data to
+    your name; write to the address in section 1 with your app version and the
+    approximate date, and we will act on what we can. You also have the right to lodge a
+    complaint with your local data protection authority at any time. In Türkiye, that is
+    the Personal Data Protection Authority (KVKK).
+  </p>
+
+  <h2>12. Residents of California and other US states</h2>
+  <p>
+    We do not sell personal information, and the data described in sections 4 and 5 is
+    processed by Google as our service provider, on our behalf and under contract.
+    Nothing described in this policy qualifies as a "sale" or as "sharing for
+    cross-context behavioural advertising" under the CCPA/CPRA or similar state laws.
+  </p>
+
+  <h2>13. Retention</h2>
+  <ul>
+    <li><strong>On your device:</strong> your measurements, settings and calibration
+      remain until you delete them, clear the app's data or uninstall it.</li>
+    <li><strong>Usage statistics:</strong> kept by Firebase Analytics for at most
+      14 months, after which event-level data is deleted automatically.</li>
+    <li><strong>Crash reports:</strong> retained by Firebase Crashlytics according to
+      Google's own retention schedule (currently 90 days); we hold no independent copy.</li>
+  </ul>
+
+  <h2>14. Security</h2>
+  <p>
+    The data described in section 3 lives in storage that Android isolates to this app
+    alone; no other app can read it without your device being compromised. Everything the
+    app sends — statistics, crash reports and purchase checks — travels over TLS.
+  </p>
+
+  <h2>15. Changes to this policy</h2>
+  <p>
+    If what the app collects or stores ever changes, we will update this page and the
+    date at the top. Any such change would also be reflected in the app's Data safety
+    section on Google Play before it ships.
+  </p>
+
+  <h2>16. Contact</h2>
+  <p>
+    <span class="fill">Ufuk Mobil Uygulama Atölyesi</span><br>
+    <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span><br>
+    <span class="fill">Osmangazi/BURSA</span>
+  </p>
+
+  </section>
+
+  <!-- ==================================================================== -->
+  <!--  TÜRKÇE                                                              -->
+  <!-- ==================================================================== -->
+  <section id="tr" lang="tr">
+
+  <h1>Gizlilik Politikası</h1>
+  <p class="meta">
+    Su Terazisi — Android uygulaması, paket <code>com.ub.bubblelevel</code><br>
+    Son güncelleme: <span class="fill">2026-10-07</span>
+  </p>
+
+  <div class="summary">
+    <p><strong>Kısa hâli.</strong> Su Terazisi'nde hesap ve reklam yoktur; reklam kimliği
+    hiç kullanılmaz. Cihazınızdan iki şey çıkar: anonim <strong>kullanım
+    istatistikleri</strong> (hangi özelliklerin kullanıldığı — ölçtüğünüz açılar ya da
+    verdiğiniz adlar asla) ve <strong>çökme raporları</strong>; ikisi de Google Firebase
+    üzerinden. Kaydettiğiniz ölçümler, ayarlarınız ve kalibrasyonunuz cihazınızdaki
+    uygulamaya özel depolamada kalır ve uygulama tarafından hiçbir zaman gönderilmez.</p>
+  </div>
+
+  <h2>1. Sorumlu taraf</h2>
+  <p>
+    Bu uygulama <span class="fill">Ufuk Mobil Uygulama Atölyesi</span> tarafından yayımlanmaktadır
+    ("biz"); burada anlatılan işleme faaliyetlerinin veri sorumlusu bu taraftır.
+  </p>
+  <p>
+    Gizlilik iletişimi: <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span>. Gizlilikle ilgili soru
+    ve talepler bu adrese iletildiğinde yanıtlanır.
+  </p>
+  <p>
+    Bu politika İngilizce ve Türkçe olarak yayımlanmıştır. İki metin arasında farklılık
+    olması hâlinde <strong>İngilizce metin esas alınır</strong>.
+  </p>
+
+  <h2>2. Toplamadıklarımız</h2>
+  <ul>
+    <li><strong>Hesap, giriş veya profil yok.</strong></li>
+    <li><strong>Reklam ve reklam kimliği yok.</strong> Uygulamada reklam SDK'sı bulunmaz.
+      Firebase'in normalde eklediği reklam kimliği izinleri uygulamadan kaldırılmış,
+      reklam kimliği toplama kapatılmış ve reklam kişiselleştirme sinyalleri devre dışı
+      bırakılmıştır.</li>
+    <li>Kamera, konum, kişiler, mikrofon veya uygulamanın kendi deposu dışında dosya
+      erişimi yoktur. Uygulama, teraziyi gösterebilmek için cihazın hareket sensörlerini
+      (ivmeölçer / yerçekimi) okur; bu değerler cihazda işlenir ve hiçbir yere
+      gönderilmez.</li>
+    <li>Kaydettiğiniz ölçümler, onlara verdiğiniz adlar, ayarlarınız ve kalibrasyonunuz
+      hiçbir zaman gönderilmez — bkz. 3. bölüm.</li>
+  </ul>
+
+  <h2>3. Cihazınızda ne saklanıyor</h2>
+  <p>
+    Toplanmıyor olması saklanmıyor olması demek değil. Uygulama, Android tarafından
+    izole edilmiş ve diğer uygulamaların erişemediği kendi özel deposuna yazar:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Ne</th><th>Nerede</th><th>İçeriği</th></tr></thead>
+      <tbody>
+        <tr><td>Kaydedilen ölçümler</td><td>Yerel veritabanı (Room)</td><td>Araç ve mod, referans kenar, açılar, birim, bağıl ölçüm olup olmadığı, tarih, verdiğiniz ad</td></tr>
+        <tr><td>Tercihler</td><td>Yerel depolama (DataStore)</td><td>Birim, tolerans, ondalık, tema ve renkler, ses / titreşim / ekranı açık tutma seçenekleri, dil</td></tr>
+        <tr><td>Kalibrasyon</td><td>Yerel depolama (DataStore)</td><td>Kalibrasyonda ölçülen sensör sapmaları, kalibrasyon profili</td></tr>
+        <tr><td>Değerlendirme sayaçları</td><td>Yerel depolama (DataStore)</td><td>Kaç ölçüm kaydettiğiniz, kaç farklı gün uygulamayı açtığınız, en son ne zaman değerlendirme istendiği</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Bunların hiçbiri uygulama üzerinden cihazınızdan çıkmaz. Kaydettiğiniz ölçümleri
+    istediğiniz an uygulama içinden görüntüleyip silebilirsiniz. Bir ölçümü paylaşmak ya
+    da ölçümleri CSV olarak dışa aktarmak <em>sizin</em> yaptığınız bir işlemdir; Android'in
+    kendi paylaşım penceresi üzerinden, seçtiğiniz uygulamaya — uygulamanın kendisi
+    bunları hiçbir yere göndermez.
+  </p>
+
+  <h2>4. Kullanım istatistikleri</h2>
+  <p>
+    Hangi özelliklerin gerçekten kullanıldığını öğrenmek için uygulama
+    <strong>Google Firebase Analytics</strong>'e küçük ve sabit bir olay listesi gönderir:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Olay</th><th>Taşıdığı bilgi</th></tr></thead>
+      <tbody>
+        <tr><td>Bir ekran açıldı</td><td>Ekranın adı (örneğin "ayarlar")</td></tr>
+        <tr><td>Bir ölçüm kaydedildi</td><td>Mod ve birim — ölçülen değer ya da adı <strong>değil</strong></td></tr>
+        <tr><td>Bir kalibrasyon kaydedildi</td><td>Hangi kenar ve hangi kalibrasyon profili</td></tr>
+        <tr><td>Pro ekranı gösterildi / satın alma başlatıldı</td><td>Hangi Pro özelliğiyle ilgili olduğu</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Firebase bu olayları takma adlı bir uygulama örneği kimliğiyle ilişkilendirir ve
+    otomatik olarak topladığı temel teknik bilgileri ekler (cihaz modeli, Android sürümü,
+    uygulama sürümü, ağdan türetilen ülke ve oturum süreleri). Veriler yalnızca toplu
+    olarak, neyin geliştirileceğine karar vermek için kullanılır. Reklam için kullanılmaz,
+    reklam kimliğiyle birleştirilmez ve hakkınızda profil oluşturmak için kullanılmaz.
+  </p>
+
+  <h2>5. Çökme raporları</h2>
+  <p>
+    Uygulama çökerse <strong>Google Firebase Crashlytics</strong> üzerinden bir tanılama
+    raporu gönderebilir.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Veri</th><th>Neden</th></tr></thead>
+      <tbody>
+        <tr><td>Çökme kayıtları ve yığın izleri</td><td>Hatayı tespit etmek</td></tr>
+        <tr><td>Cihaz modeli, Android sürümü, uygulama sürümü</td><td>Hatayı yeniden üretmek</td></tr>
+        <tr><td>Firebase kurulum kimliği (takma adlı bir tanımlayıcı)</td><td>Aynı kurulumdan gelen raporları gruplamak</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Google, 4. ve 5. bölümlerdeki veriler için
+    <a href="https://firebase.google.com/support/privacy">Firebase koşulları</a>
+    çerçevesinde hizmet sağlayıcımız olarak hareket eder; bu veriler satılmaz ya da
+    reklamcılarla paylaşılmaz ve Google'ın bunları işleyişi ayrıca
+    <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>'na tabidir.
+    Şu an istatistikleri ya da çökme raporlarını kapatan bir uygulama içi anahtar yoktur;
+    uygulamayı kaldırmak ikisini de hemen durdurur.
+  </p>
+
+  <h2>6. Satın alma</h2>
+  <p>
+    İsteğe bağlı Pro yükseltmesi, <strong>Google Play Faturalandırma</strong> ile satılan
+    tek seferlik bir satın almadır. Ödeme tamamen Google Play tarafından kendi koşulları
+    çerçevesinde işlenir; uygulama adınızı, kart ya da diğer ödeme bilgilerinizi görmez ve
+    saklamaz. Pro özelliklerini açabilmek için Google Play'e yalnızca hesabınızda Pro'nun
+    satın alınıp alınmadığını sorar.
+  </p>
+
+  <h2>7. Android'in kendi yedeklemesi</h2>
+  <p>
+    Uygulama Android'in yerleşik yedeklemesine (<code>allowBackup</code>) izin verir;
+    cihazınızda yedekleme açıksa Android, uygulamanın verilerini kendi Google hesabınıza
+    yapılan cihaz yedeğine dahil edebilir. Bu bir platform özelliğidir, bizim yaptığımız
+    ya da erişebildiğimiz bir şey değildir — sunucu işletmiyoruz ve bundan hiçbir şey
+    almıyoruz. İstemiyorsanız cihaz yedeklemesini telefonunuzun ayarlarından
+    kapatabilirsiniz.
+  </p>
+
+  <h2>8. Google Play'in değerlendirme isteği</h2>
+  <p>
+    Uygulama zaman zaman Google'ın resmî <strong>Play Uygulama İçi Değerlendirme</strong>
+    bileşeniyle sizden puan isteyebilir. Bu istek ve değerlendirme akışı tamamen
+    cihazınızda kurulu Play Store uygulaması tarafından yürütülür; paylaşmayı seçtiğiniz
+    herkese açık puan ve yorum dışında bize hiçbir şey ulaşmaz.
+  </p>
+
+  <h2>9. İzinler</h2>
+  <ul>
+    <li><code>VIBRATE</code> — cihaz düz olduğunda isteğe bağlı titreşim.</li>
+    <li><code>INTERNET</code> ve <code>ACCESS_NETWORK_STATE</code> — 4. ve 5. bölümlerdeki
+      istatistik ve çökme raporlarının gönderilmesi ve satın alma için Google Play ile
+      iletişim.</li>
+    <li><code>BILLING</code> — Google Play satın almaları (6. bölüm).</li>
+  </ul>
+  <p>Uygulama kamera, konum, kişiler, mikrofon veya depolama izni istemez.</p>
+
+  <h2>10. Çocuklar</h2>
+  <p>
+    Bu uygulama çocuklara yönelik değildir. 13 yaşından (veya ülkenizdeki eşdeğer asgari
+    yaştan) küçük çocuklardan bilerek kişisel veri toplamayız; istatistikler ve çökme
+    raporları uygulamayı kimin kullandığını belirleyen bir bilgi içermez. Bir çocuğun
+    bize kişisel veri sağladığını düşünüyorsanız 1. bölümdeki adresten bize ulaşın, silelim.
+  </p>
+
+  <h2>11. Hukuki dayanaklar (GDPR) ve haklarınız</h2>
+  <p>
+    4. ve 5. bölümlerdeki kullanım istatistikleri ve çökme verileri için
+    <strong>meşru menfaate</strong> (GDPR m. 6(1)(f)) dayanırız: hangi özelliklerin
+    kullanıldığını anlamak ve yayımladığımız yazılımdaki hataları teşhis etmek dar ve
+    beklenen amaçlardır; veriler takma adlıdır ve reklam için asla kullanılmaz. Satın alma
+    (6. bölüm) için dayanak <strong>sözleşmenin ifasıdır</strong> (m. 6(1)(b)).
+  </p>
+  <p>
+    3. bölümde anlatılan ölçümler, ayarlar ve kalibrasyon bize hiç ulaşmaz — yalnızca
+    cihazınızda, sizin denetiminizde bulunur. Bunları uygulama içinden ya da Android'in
+    <em>Ayarlar → Uygulamalar → Su Terazisi → Depolamayı temizle</em> yoluyla
+    tamamen silebilirsiniz. Uygulamayı kaldırmak da aynı sonucu verir.
+  </p>
+  <p>
+    İstatistik ve çökme verileri için erişim, silme ya da işlemeye itiraz hakkınız
+    olabilir. Uygulamada hesap sistemi olmadığından bu verileri adınızla
+    eşleştiremeyiz; uygulama sürümünü ve yaklaşık tarihi belirterek 1. bölümdeki adrese
+    yazın, yapabildiğimizi yapalım. Ayrıca istediğiniz zaman bulunduğunuz yerdeki veri
+    koruma otoritesine şikâyette bulunma hakkınız vardır. Türkiye'de bu kurum Kişisel
+    Verileri Koruma Kurumu'dur (KVKK).
+  </p>
+
+  <h2>12. Kaliforniya ve diğer ABD eyaletleri sakinleri</h2>
+  <p>
+    Kişisel bilgi satmayız; 4. ve 5. bölümlerde anlatılan veriler Google tarafından
+    hizmet sağlayıcımız sıfatıyla, bizim adımıza ve sözleşmeye dayalı olarak işlenir. Bu
+    politikada anlatılan hiçbir şey CCPA/CPRA veya benzeri eyalet yasaları kapsamında
+    "satış" ya da "bağlamlar arası davranışsal reklam için paylaşım" niteliği taşımaz.
+  </p>
+
+  <h2>13. Saklama süreleri</h2>
+  <ul>
+    <li><strong>Cihazınızda:</strong> ölçümleriniz, ayarlarınız ve kalibrasyonunuz siz
+      silene, uygulama verilerini temizleyene ya da uygulamayı kaldırana kadar kalır.</li>
+    <li><strong>Kullanım istatistikleri:</strong> Firebase Analytics'te en fazla 14 ay
+      tutulur; ardından olay düzeyindeki veriler otomatik olarak silinir.</li>
+    <li><strong>Çökme raporları:</strong> Firebase Crashlytics tarafından Google'ın kendi
+      saklama takvimine göre (şu an 90 gün) tutulur; bizde ayrı bir kopyası yoktur.</li>
+  </ul>
+
+  <h2>14. Güvenlik</h2>
+  <p>
+    3. bölümde anlatılan veriler, Android'in yalnızca bu uygulamaya ayırdığı depolamada
+    durur; cihazınız ele geçirilmedikçe başka bir uygulama bunları okuyamaz. Uygulamanın
+    gönderdiği her şey — istatistikler, çökme raporları ve satın alma sorguları — TLS
+    üzerinden iletilir.
+  </p>
+
+  <h2>15. Bu politikadaki değişiklikler</h2>
+  <p>
+    Uygulamanın topladığı ya da sakladığı şeyler değişirse bu sayfayı ve en üstteki
+    tarihi güncelleriz. Böyle bir değişiklik, yayımlanmadan önce uygulamanın Google
+    Play'deki Veri güvenliği bölümüne de yansıtılır.
+  </p>
+
+  <h2>16. İletişim</h2>
+  <p>
+    <span class="fill">Ufuk Mobil Uygulama Atölyesi</span><br>
+    <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span><br>
+    <span class="fill">Osmangazi/BURSA</span>
+  </p>
+
+  <h2>Ek — KVKK Aydınlatma Metni</h2>
+  <p>
+    6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi ve Aydınlatma
+    Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ
+    uyarınca hazırlanmıştır. Bu ek <strong>yeni bir işleme faaliyeti eklemez</strong>;
+    yukarıdaki bölümlerde anlatılanların KVKK terimleriyle karşılığıdır.
+  </p>
+
+  <h3>Veri sorumlusu</h3>
+  <p>
+    <span class="fill">Ufuk Mobil Uygulama Atölyesi</span><br>
+    <span class="fill">Osmangazi/BURSA</span><br>
+    <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span>
+  </p>
+
+  <h3>İşlenen kişisel veriler, işleme amaçları ve hukuki sebepleri</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Veri</th><th>Amaç</th><th>Hukuki sebep (KVKK m. 5)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Uygulama içi kullanım olayları (açılan ekran, kaydedilen ölçümün modu ve
+            birimi, kalibrasyon kenarı ve profili, Pro ekranı ve satın alma başlatma),
+            cihaz modeli, Android sürümü, uygulama sürümü, ülke, uygulama örneği kimliği</td>
+          <td>Hangi özelliklerin kullanıldığının toplu olarak analizi ve uygulamanın
+            geliştirilmesi</td>
+          <td>Meşru menfaat — m. 5/2-f. Kapatma anahtarı yok, bkz. 4. bölüm.</td>
+        </tr>
+        <tr>
+          <td>Çökme kaydı, cihaz modeli, Android sürümü, uygulama sürümü, Firebase
+            kurulum kimliği</td>
+          <td>Uygulama hatalarının tespiti ve giderilmesi</td>
+          <td>Meşru menfaat — m. 5/2-f. Kapatma anahtarı yok, bkz. 5. bölüm.</td>
+        </tr>
+        <tr>
+          <td>Pro satın alma durumu (Google Play'den)</td>
+          <td>Satın alınan özelliklerin açılması</td>
+          <td>Sözleşmenin ifası — m. 5/2-c.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    3. bölümde sayılan ölçüm, ayar, kalibrasyon ve sayaç verileri yalnızca cihazınızın
+    kendi deposunda tutulur; bunlara bizim erişimimiz veya bunlar üzerinde bizim bir
+    işleme faaliyetimiz bulunmamaktadır — bu bakımdan KVKK m. 5 anlamında bir işleme
+    faaliyeti gerçekleşmemektedir.
+  </p>
+
+  <h3>Kişisel veri toplamanın yöntemi</h3>
+  <p>
+    Kullanım ve çökme verileri yalnızca otomatik yollarla, uygulamaya gömülü Firebase
+    Analytics ve Firebase Crashlytics yazılım geliştirme kitleri aracılığıyla toplanır.
+    Satın alma durumu Google Play Faturalandırma kütüphanesi aracılığıyla Google Play'den
+    sorgulanır. Kullanıcıdan form, kayıt veya benzeri bir yolla veri istenmez;
+    uygulamada hesap ve giriş bulunmamaktadır.
+  </p>
+
+  <h3>Aktarılan taraflar ve yurt dışına aktarım</h3>
+  <p>
+    Kullanım ve çökme verileri Google Ireland Limited ve Google LLC'ye aktarılabilmektedir.
+    Bu şirketlerin sunucuları yurt dışında bulunduğundan, aktarım KVKK m. 9 anlamında
+    <strong>yurt dışına aktarım</strong> niteliğindedir. Android'in kendi cihaz
+    yedekleme özelliği (bkz. 7. bölüm) ayrıca sizin kendi Google hesabınıza
+    yönelik bir platform işlevidir; bizim tarafımızdan yapılan veya erişilen bir
+    aktarım değildir.
+  </p>
+
+  <h3>İlgili kişinin hakları (KVKK m. 11)</h3>
+  <p>Kanunun 11. maddesi uyarınca veri sorumlusuna başvurarak şunları talep edebilirsiniz:</p>
+  <ul>
+    <li>Kişisel verinizin işlenip işlenmediğini öğrenme,</li>
+    <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+    <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+    <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+    <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+    <li>Kanunun 7. maddesindeki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+    <li>Düzeltme, silme ve yok etme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini
+      isteme,</li>
+    <li>Münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonuç
+      ortaya çıkmasına itiraz etme,</li>
+    <li>Kanuna aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini
+      talep etme.</li>
+  </ul>
+  <p>
+    Uygulamada hesap bulunmadığından sizi adınızla eşleştiremeyiz; taleplerinizde uygulama
+    sürümünü ve yaklaşık tarihi belirtmeniz işimizi kolaylaştırır.
+    Talepleriniz <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span>
+    adresine iletilebilir; başvurular en geç <strong>otuz gün</strong> içinde
+    sonuçlandırılır. Başvurunuzun reddedilmesi, verilen cevabı yetersiz bulmanız
+    veya süresinde cevap verilmemesi hâlinde
+    <a href="https://www.kvkk.gov.tr">Kişisel Verileri Koruma Kurulu</a>'na
+    şikâyette bulunabilirsiniz.
+  </p>
+
+  </section>
+
+  <footer>
+    Bubble Level · Su Terazisi · <code>com.ub.bubblelevel</code>
+  </footer>
+
+</main>
+
+<script>
+  // Yalnızca kolaylık: tarayıcı dili Türkçeyse ve kullanıcı henüz bir dil
+  // seçmediyse Türkçeyi aç. Varsayılan İngilizce; geçişin kendisi CSS :target
+  // ile çalıştığı için bu betik olmasa da sayfa iki dilde de okunabilir.
+  (function () {
+    var lang = (navigator.language || "").toLowerCase();
+    if (!location.hash && lang.indexOf("tr") === 0) {
+      location.replace("#tr");
+    }
+    function sync() {
+      document.documentElement.lang = location.hash === "#tr" ? "tr" : "en";
+    }
+    window.addEventListener("hashchange", sync);
+    sync();
+  })();
+</script>
+
+</body>
+</html>
