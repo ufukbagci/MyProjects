@@ -137,16 +137,17 @@
   <h1>Privacy Policy</h1>
   <p class="meta">
     Ruler — Android app, package <code>com.ub.ruler</code><br>
-    Last updated: <span class="fill">2026-08-23</span>
+    Last updated: <span class="fill">2026-10-14</span>
   </p>
 
   <div class="summary">
-    <p><strong>The short version.</strong> Ruler asks for a single permission — internet
-    access — and uses it for exactly one thing: sending an anonymous crash report through
-    Firebase Crashlytics if the app fails, so we can find and fix the problem. There is no
-    account, no ads and no analytics. Everything else the app writes — your saved
-    measurements, your settings, your calibration — stays in the app's private storage on
-    your device and is never transmitted.</p>
+    <p><strong>The short version.</strong> Measuring is ad-free and offline. Data leaves
+    your device in only two cases: an anonymous crash report through Firebase Crashlytics
+    if the app fails, and — <strong>only if you choose to watch one</strong> — a rewarded
+    video ad from Google AdMob that unlocks Pro features for one hour. There is no account
+    and no analytics. Everything else the app writes — your saved measurements, your
+    settings, your calibration — stays in the app's private storage on your device and is
+    never transmitted.</p>
   </div>
 
   <h2>1. Who is responsible</h2>
@@ -165,15 +166,17 @@
 
   <h2>2. What we do not collect</h2>
   <p>
-    <code>INTERNET</code> is the only permission the app requests — open the permission
-    list before you install and you will see nothing else there. Beyond the crash reports
-    described in section 4:
+    Beyond the crash reports described in section 4 and the optional rewarded ads
+    described in section 5:
   </p>
   <ul>
     <li><strong>No account, no sign-in, no profile.</strong></li>
-    <li><strong>No advertising and no analytics.</strong> The app contains no AdMob,
-      Firebase Analytics or similar SDK — Crashlytics is the only Firebase component in
-      the app, and it exists solely for crash reports.</li>
+    <li><strong>No analytics.</strong> The app contains no Firebase Analytics or similar
+      SDK. Crashlytics is the only Firebase component, and it exists solely for crash
+      reports.</li>
+    <li><strong>No ads while you measure.</strong> There are no banner or interstitial
+      ads, and the ad SDK is not started when the app opens — only when you ask for a
+      rewarded ad (section 5).</li>
     <li>No camera, no location, no contacts, no microphone, no files outside the app's
       own storage.</li>
     <li>Your saved measurements, settings and calibration are never transmitted — see
@@ -205,8 +208,8 @@
   <h2>4. Crash reports</h2>
   <p>
     If the app fails, it can send a diagnostic report through <strong>Google Firebase
-    Crashlytics</strong>. This is the one thing that leaves your device, and the only
-    reason the app holds the <code>INTERNET</code> permission at all.
+    Crashlytics</strong>. Apart from a rewarded ad you choose to watch (section 5), this is
+    the only thing that leaves your device.
   </p>
   <div class="tablewrap">
     <table>
@@ -221,8 +224,7 @@
   <p>
     <strong>There is no toggle for this.</strong> Unlike an ad SDK, a crash reporter that
     only some installations report from is a lot less useful for finding what is actually
-    broken, so it stays on for everyone. It is also the only network activity in the app:
-    no report is sent unless the app crashes.
+    broken, so it stays on for everyone. No report is sent unless the app crashes.
   </p>
   <p>
     Google acts as our service provider for this data under its own terms; it is not sold
@@ -230,7 +232,56 @@
     <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
   </p>
 
-  <h2>5. Android's own backup</h2>
+  <h2>5. Rewarded ads (Google AdMob)</h2>
+  <p>
+    Some features are part of Pro. Instead of buying Pro, you can unlock those features
+    for <strong>one hour</strong> by watching a short video ad, served by
+    <strong>Google AdMob</strong>. This is entirely optional: ads appear only when you tap
+    the unlock button, and the ad SDK is not started before that. If you never tap it, the
+    app makes no ad requests at all.
+  </p>
+  <p>
+    When you do request an ad, AdMob may collect and process:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Data</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Advertising ID (or, if you have deleted it, the app set ID)</td><td>Serve and measure ads, limit repeats, prevent fraud; personalise ads where permitted</td></tr>
+        <tr><td>IP address (used to infer approximate location)</td><td>Serve ads relevant to your region, prevent fraud</td></tr>
+        <tr><td>Device and app information (model, OS version, language, app version)</td><td>Deliver an ad that works on your device</td></tr>
+        <tr><td>Ad interactions (ad shown, watched to the end, tapped)</td><td>Grant the reward, measure the ad, prevent fraud</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <strong>Consent in the EEA, the UK and Switzerland.</strong> In these regions the app
+    first shows Google's consent form (Google's User Messaging Platform) before any ad is
+    requested. You can accept, decline, or choose individual purposes. If you decline, you
+    may still be shown non-personalised or limited ads. You can change your choice at any
+    time in <em>Settings → Ad privacy options</em> in the app.
+  </p>
+  <p>
+    <strong>Everywhere.</strong> You can reset or delete your advertising ID, or opt out
+    of ads personalisation, in your phone's own settings
+    (<em>Settings → Privacy → Ads</em> on most Android devices).
+  </p>
+  <p>
+    Google processes ad data under its own terms and is responsible for its own use of it.
+    How Google uses data from apps that use its services is explained at
+    <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.
+    We do not receive your advertising ID or any of the data above; we only see aggregate
+    reports (such as how many ads were shown).
+  </p>
+
+  <h2>6. Pro purchase (Google Play Billing)</h2>
+  <p>
+    Pro is a one-time purchase handled entirely by Google Play. Payment details and the
+    purchase record stay with Google Play; the app never sees or stores your card or
+    account details. It only asks Google Play whether Pro is active on this device.
+  </p>
+
+  <h2>7. Android's own backup</h2>
   <p>
     The app allows Android's built-in backup (<code>allowBackup</code>), so if you have
     backup enabled on your device, Android may include the app's data in your device
@@ -239,7 +290,7 @@
     device backup off in your phone's own settings if you would rather it not happen.
   </p>
 
-  <h2>6. Google Play's rating prompt</h2>
+  <h2>8. Google Play's rating prompt</h2>
   <p>
     The app may occasionally ask you to rate it, using Google's official
     <strong>Play In-App Review</strong> component. That prompt and the rating flow are
@@ -248,21 +299,29 @@
     anything on our behalf.
   </p>
 
-  <h2>7. Children</h2>
+  <h2>9. Children</h2>
   <p>
     This app is not directed at children. We do not knowingly collect personal data from
     children under the age of 13 (or the equivalent minimum age in your country); a crash
-    report contains no information that identifies who was using the app. If you believe
+    report contains no information that identifies who was using the app, and rewarded
+    ads are shown only when requested. If you believe
     a child has provided us with personal data, contact us at the address in section 1
     and we will delete it.
   </p>
 
-  <h2>8. Legal bases (GDPR) and your rights</h2>
+  <h2>10. Legal bases (GDPR) and your rights</h2>
   <p>
     For the crash data described in section 4, we rely on <strong>legitimate interests</strong>
     (Art. 6(1)(f) GDPR) — diagnosing and fixing faults in software we publish is a
     narrow, expected purpose that does not need your separate consent, and it stops the
     moment the report is sent; we hold no ongoing profile of you.
+  </p>
+  <p>
+    For the rewarded ads described in section 5, storing and accessing information on
+    your device and personalised advertising rely on your <strong>consent</strong>
+    (Art. 6(1)(a) GDPR), collected through Google's consent form. You can withdraw it at
+    any time in <em>Settings → Ad privacy options</em>; withdrawing does not affect
+    processing that took place before.
   </p>
   <p>
     The measurements and settings described in section 3 never reach us at all, so there
@@ -281,38 +340,46 @@
     Türkiye, that is the Personal Data Protection Authority (KVKK).
   </p>
 
-  <h2>9. Residents of California and other US states</h2>
+  <h2>11. Residents of California and other US states</h2>
   <p>
-    We do not sell personal information, and the crash data described in section 4 is
-    processed by Google solely as our service provider, on our behalf and under
-    contract — not for Google's own purposes. Nothing described in this policy qualifies
-    as a "sale" or as "sharing for cross-context behavioural advertising" under the
-    CCPA/CPRA or similar state laws.
+    We do not sell personal information for money. The crash data described in section 4
+    is processed by Google solely as our service provider, on our behalf and under
+    contract — not for Google's own purposes.
+  </p>
+  <p>
+    When you choose to watch a rewarded ad (section 5), the identifiers and device data
+    listed there are disclosed to Google, which may use them for advertising. Under the
+    CCPA/CPRA and similar state laws this may count as "sharing" for cross-context
+    behavioural advertising. You can opt out by not requesting rewarded ads, or by
+    deleting your advertising ID or turning off ads personalisation in your phone's
+    settings.
   </p>
 
-  <h2>10. Retention</h2>
+  <h2>12. Retention</h2>
   <ul>
     <li><strong>On your device:</strong> your measurements and settings remain until you
       clear the app's data or uninstall it.</li>
     <li><strong>Crash reports:</strong> retained by Firebase Crashlytics according to
       Google's own retention schedule; we hold no independent copy.</li>
+    <li><strong>Ad data:</strong> retained by Google according to its own policies; we
+      hold no copy.</li>
   </ul>
 
-  <h2>11. Security</h2>
+  <h2>13. Security</h2>
   <p>
     The data described in section 3 lives in storage that Android isolates to this app
-    alone; no other app can read it without your device being compromised. The one thing
-    that does leave the device — a crash report — is sent over TLS.
+    alone; no other app can read it without your device being compromised. What does
+    leave the device — a crash report, or an ad request you made — is sent over TLS.
   </p>
 
-  <h2>12. Changes to this policy</h2>
+  <h2>14. Changes to this policy</h2>
   <p>
     If what the app collects or stores ever changes, we will update this page and the
     date at the top. Any such change would also be reflected in the app's Data safety
     section on Google Play before it ships.
   </p>
 
-  <h2>13. Contact</h2>
+  <h2>15. Contact</h2>
   <p>
     <span class="fill">Ufuk Mobil Uygulama Atölyesi</span><br>
     <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span><br>
@@ -329,16 +396,17 @@
   <h1>Gizlilik Politikası</h1>
   <p class="meta">
     Cetvel — Android uygulaması, paket <code>com.ub.ruler</code><br>
-    Son güncelleme: <span class="fill">2026-08-23</span>
+    Son güncelleme: <span class="fill">2026-10-14</span>
   </p>
 
   <div class="summary">
-    <p><strong>Kısa hâli.</strong> Cetvel tek bir izin ister — internet erişimi — ve onu
-    tek bir şey için kullanır: uygulama çökerse Firebase Crashlytics üzerinden anonim bir
-    çökme raporu göndermek, sorunu bulup düzeltebilelim diye. Hesap, reklam veya analitik
-    yoktur. Uygulamanın yazdığı geri kalan her şey — kaydettiğiniz ölçümler, ayarlarınız,
-    kalibrasyonunuz — cihazınızdaki uygulamaya özel depolamada kalır ve hiçbir zaman
-    gönderilmez.</p>
+    <p><strong>Kısa hâli.</strong> Ölçüm reklamsız ve çevrimdışıdır. Cihazınızdan yalnızca
+    iki durumda veri çıkar: uygulama çökerse Firebase Crashlytics üzerinden anonim bir
+    çökme raporu ve — <strong>yalnızca siz izlemeyi seçerseniz</strong> — Pro özelliklerini
+    bir saatliğine açan, Google AdMob'dan gelen ödüllü bir video reklam. Hesap veya
+    analitik yoktur. Uygulamanın yazdığı geri kalan her şey — kaydettiğiniz ölçümler,
+    ayarlarınız, kalibrasyonunuz — cihazınızdaki uygulamaya özel depolamada kalır ve
+    hiçbir zaman gönderilmez.</p>
   </div>
 
   <h2>1. Sorumlu taraf</h2>
@@ -357,14 +425,17 @@
 
   <h2>2. Toplamadıklarımız</h2>
   <p>
-    <code>INTERNET</code>, uygulamanın istediği tek izin — kurulumdan önce izin listesine
-    bakın, başka hiçbir şey görmezsiniz. 4. bölümde anlatılan çökme raporlarının dışında:
+    4. bölümde anlatılan çökme raporlarının ve 5. bölümde anlatılan isteğe bağlı ödüllü
+    reklamların dışında:
   </p>
   <ul>
     <li><strong>Hesap, giriş veya profil yok.</strong></li>
-    <li><strong>Reklam veya analitik yok.</strong> Uygulamada AdMob, Firebase Analytics
-      veya benzeri bir SDK bulunmaz — Crashlytics, uygulamadaki tek Firebase bileşeni ve
-      yalnızca çökme raporu için var.</li>
+    <li><strong>Analitik yok.</strong> Uygulamada Firebase Analytics veya benzeri bir SDK
+      bulunmaz. Crashlytics tek Firebase bileşenidir ve yalnızca çökme raporu için
+      vardır.</li>
+    <li><strong>Ölçerken reklam yok.</strong> Banner veya geçiş reklamı yoktur; reklam
+      SDK'sı uygulama açılırken başlatılmaz, yalnızca siz ödüllü reklam istediğinizde
+      başlar (5. bölüm).</li>
     <li>Kamera, konum, kişiler, mikrofon veya uygulamanın kendi deposu dışında dosya
       erişimi yoktur.</li>
     <li>Kaydettiğiniz ölçümler, ayarlarınız ve kalibrasyonunuz hiçbir zaman gönderilmez —
@@ -397,8 +468,8 @@
   <h2>4. Çökme raporları</h2>
   <p>
     Uygulama çökerse <strong>Google Firebase Crashlytics</strong> üzerinden bir tanılama
-    raporu gönderebilir. Cihazınızdan çıkan tek şey budur ve uygulamanın
-    <code>INTERNET</code> iznine sahip olmasının tek sebebi de bu.
+    raporu gönderebilir. İzlemeyi seçtiğiniz bir ödüllü reklam (5. bölüm) dışında
+    cihazınızdan çıkan tek şey budur.
   </p>
   <div class="tablewrap">
     <table>
@@ -413,8 +484,8 @@
   <p>
     <strong>Bunun için bir kapatma anahtarı yok.</strong> Bir reklam SDK'sının aksine,
     yalnızca bazı kurulumların rapor verdiği bir çökme raporlayıcı neyin bozuk olduğunu
-    bulmak için çok daha az işe yarar; bu yüzden herkes için açık kalıyor. Bu aynı zamanda
-    uygulamadaki tek ağ etkinliği: uygulama çökmedikçe hiçbir rapor gönderilmez.
+    bulmak için çok daha az işe yarar; bu yüzden herkes için açık kalıyor. Uygulama
+    çökmedikçe hiçbir rapor gönderilmez.
   </p>
   <p>
     Google, bu veri bakımından kendi koşulları altında hizmet sağlayıcımız olarak
@@ -423,7 +494,59 @@
     Politikası</a>'na tabidir.
   </p>
 
-  <h2>5. Android'in kendi yedeklemesi</h2>
+  <h2>5. Ödüllü reklamlar (Google AdMob)</h2>
+  <p>
+    Bazı özellikler Pro'nun parçasıdır. Pro'yu satın almak yerine, <strong>Google
+    AdMob</strong> tarafından sunulan kısa bir video reklamı izleyerek bu özellikleri
+    <strong>bir saatliğine</strong> açabilirsiniz. Bu tamamen isteğe bağlıdır: reklam
+    yalnızca kilidi açma düğmesine dokunduğunuzda gösterilir ve reklam SDK'sı ondan önce
+    başlatılmaz. Düğmeye hiç dokunmazsanız uygulama hiçbir reklam isteği yapmaz.
+  </p>
+  <p>
+    Reklam istediğinizde AdMob şunları toplayıp işleyebilir:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Veri</th><th>Amaç</th></tr></thead>
+      <tbody>
+        <tr><td>Reklam kimliği (sildiyseniz uygulama grubu kimliği)</td><td>Reklamı sunmak ve ölçmek, tekrarları sınırlamak, sahtekârlığı önlemek; izin verilen yerlerde reklamı kişiselleştirmek</td></tr>
+        <tr><td>IP adresi (yaklaşık konumu çıkarmak için)</td><td>Bölgenize uygun reklam sunmak, sahtekârlığı önlemek</td></tr>
+        <tr><td>Cihaz ve uygulama bilgisi (model, işletim sistemi sürümü, dil, uygulama sürümü)</td><td>Cihazınızda çalışan bir reklam göstermek</td></tr>
+        <tr><td>Reklam etkileşimleri (reklam gösterildi, sonuna kadar izlendi, dokunuldu)</td><td>Ödülü vermek, reklamı ölçmek, sahtekârlığı önlemek</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <strong>AEA, Birleşik Krallık ve İsviçre'de onay.</strong> Bu bölgelerde uygulama,
+    herhangi bir reklam istemeden önce Google'ın onay formunu (Google User Messaging
+    Platform) gösterir. Kabul edebilir, reddedebilir veya amaçları tek tek
+    seçebilirsiniz. Reddederseniz yine de kişiselleştirilmemiş veya sınırlı reklam
+    görebilirsiniz. Seçiminizi dilediğiniz zaman uygulamadaki <em>Ayarlar → Reklam
+    gizlilik seçenekleri</em> bölümünden değiştirebilirsiniz.
+  </p>
+  <p>
+    <strong>Her yerde.</strong> Reklam kimliğinizi sıfırlayabilir veya silebilir, ya da
+    reklam kişiselleştirmeyi telefonunuzun kendi ayarlarından kapatabilirsiniz (çoğu
+    Android cihazda <em>Ayarlar → Gizlilik → Reklamlar</em>).
+  </p>
+  <p>
+    Google reklam verisini kendi koşulları altında işler ve bu veriyi kendi amaçları için
+    kullanmasından kendisi sorumludur. Google'ın, hizmetlerini kullanan uygulamalardan
+    gelen verileri nasıl kullandığı
+    <a href="https://policies.google.com/technologies/partner-sites?hl=tr">policies.google.com/technologies/partner-sites</a>
+    adresinde anlatılır. Reklam kimliğiniz veya yukarıdaki veriler bize ulaşmaz; biz
+    yalnızca toplu raporları (örneğin kaç reklam gösterildiği) görürüz.
+  </p>
+
+  <h2>6. Pro satın alma (Google Play Faturalandırma)</h2>
+  <p>
+    Pro, tamamen Google Play tarafından yürütülen tek seferlik bir satın almadır. Ödeme
+    bilgileri ve satın alma kaydı Google Play'de kalır; uygulama kart veya hesap
+    bilgilerinizi hiçbir zaman görmez ve saklamaz. Yalnızca bu cihazda Pro'nun açık olup
+    olmadığını Google Play'e sorar.
+  </p>
+
+  <h2>7. Android'in kendi yedeklemesi</h2>
   <p>
     Uygulama, Android'in yerleşik yedekleme özelliğine (<code>allowBackup</code>) izin
     verir; yani cihazınızda yedekleme açıksa Android, uygulamanın verisini kendi Google
@@ -433,7 +556,7 @@
     cihaz yedeklemesini kapatabilirsiniz.
   </p>
 
-  <h2>6. Google Play'in değerlendirme isteği</h2>
+  <h2>8. Google Play'in değerlendirme isteği</h2>
   <p>
     Uygulama, zaman zaman Google'ın resmi <strong>Play Uygulama İçi Değerlendirme</strong>
     bileşenini kullanarak sizden puan vermenizi isteyebilir. Bu istek ve değerlendirme
@@ -442,21 +565,29 @@
     adımıza veri toplamaz.
   </p>
 
-  <h2>7. Çocuklar</h2>
+  <h2>9. Çocuklar</h2>
   <p>
     Bu uygulama çocuklara yönelik değildir. 13 yaşın (veya ülkenizdeki eşdeğer asgari
     yaşın) altındaki çocuklardan bilerek kişisel veri toplamayız; bir çökme raporu
-    uygulamayı kimin kullandığını gösterecek hiçbir bilgi içermez. Bir çocuğun bize
+    uygulamayı kimin kullandığını gösterecek hiçbir bilgi içermez ve ödüllü reklamlar
+    yalnızca istendiğinde gösterilir. Bir çocuğun bize
     kişisel veri verdiğini düşünüyorsanız 1. bölümdeki adresten bize ulaşın, veriyi
     sileriz.
   </p>
 
-  <h2>8. Hukuki dayanaklar (GDPR) ve haklarınız</h2>
+  <h2>10. Hukuki dayanaklar (GDPR) ve haklarınız</h2>
   <p>
     4. bölümde anlatılan çökme verisi için dayandığımız hukuki sebep <strong>meşru
     menfaat</strong>tir (m. 6/1-f) — yayımladığımız yazılımdaki hataları teşhis edip
     düzeltmek dar kapsamlı, beklenen bir amaçtır ve ayrı bir rızanıza ihtiyaç duymaz;
     rapor gönderildiği anda sona erer, hakkınızda sürekli bir profil tutmayız.
+  </p>
+  <p>
+    5. bölümde anlatılan ödüllü reklamlarda, cihazınızda bilgi saklanması ve bu bilgiye
+    erişilmesi ile kişiselleştirilmiş reklam, Google'ın onay formuyla alınan
+    <strong>rızanıza</strong> (m. 6/1-a) dayanır. Rızanızı dilediğiniz zaman
+    <em>Ayarlar → Reklam gizlilik seçenekleri</em> bölümünden geri çekebilirsiniz; geri
+    çekmek, öncesinde yapılmış işlemeyi etkilemez.
   </p>
   <p>
     3. bölümde anlatılan ölçümler ve ayarlar bize hiç ulaşmadığından, onlar için işaret
@@ -475,38 +606,47 @@
     vardır. Türkiye'de bu kurum Kişisel Verileri Koruma Kurumu'dur (KVKK).
   </p>
 
-  <h2>9. Kaliforniya ve diğer ABD eyaletleri sakinleri</h2>
+  <h2>11. Kaliforniya ve diğer ABD eyaletleri sakinleri</h2>
   <p>
-    Kişisel bilgi satmıyoruz; 4. bölümde anlatılan çökme verisini Google yalnızca bizim
-    hizmet sağlayıcımız sıfatıyla, bizim adımıza ve sözleşme kapsamında işler — kendi
-    amaçları için değil. Bu politikada anlatılanlardan hiçbiri CCPA/CPRA veya benzeri
-    eyalet mevzuatı bakımından "satış" veya "bağlamlar arası davranışsal reklam için
-    paylaşım" sayılmaz.
+    Kişisel bilgiyi para karşılığında satmıyoruz. 4. bölümde anlatılan çökme verisini
+    Google yalnızca bizim hizmet sağlayıcımız sıfatıyla, bizim adımıza ve sözleşme
+    kapsamında işler — kendi amaçları için değil.
+  </p>
+  <p>
+    Ödüllü bir reklam izlemeyi seçtiğinizde (5. bölüm), orada sayılan tanımlayıcılar ve
+    cihaz verisi Google'a iletilir ve Google bunları reklam amacıyla kullanabilir.
+    CCPA/CPRA ve benzeri eyalet mevzuatı bakımından bu, bağlamlar arası davranışsal
+    reklam için "paylaşım" sayılabilir. Ödüllü reklam istemeyerek ya da telefonunuzun
+    ayarlarından reklam kimliğinizi silerek veya reklam kişiselleştirmeyi kapatarak bunu
+    devre dışı bırakabilirsiniz.
   </p>
 
-  <h2>10. Saklama süreleri</h2>
+  <h2>12. Saklama süreleri</h2>
   <ul>
     <li><strong>Cihazınızda:</strong> ölçümleriniz ve ayarlarınız, uygulama verilerini
       silene ya da uygulamayı kaldırana kadar durur.</li>
     <li><strong>Çökme raporları:</strong> Firebase Crashlytics tarafından Google'ın
       kendi saklama takvimine göre tutulur; bizde ayrı bir kopyası bulunmaz.</li>
+    <li><strong>Reklam verisi:</strong> Google tarafından kendi politikalarına göre
+      tutulur; bizde kopyası bulunmaz.</li>
   </ul>
 
-  <h2>11. Güvenlik</h2>
+  <h2>13. Güvenlik</h2>
   <p>
     3. bölümde anlatılan veriler, Android tarafından yalnızca bu uygulamaya izole
     edilmiş depolamada bulunur; cihazınız ele geçirilmedikçe başka hiçbir uygulama
-    okuyamaz. Cihazdan çıkan tek şey — bir çökme raporu — TLS üzerinden gönderilir.
+    okuyamaz. Cihazdan çıkanlar — bir çökme raporu ya da sizin yaptığınız bir reklam
+    isteği — TLS üzerinden gönderilir.
   </p>
 
-  <h2>12. Bu politikadaki değişiklikler</h2>
+  <h2>14. Bu politikadaki değişiklikler</h2>
   <p>
     Uygulamanın topladığı veya sakladığı veriler değişirse bu sayfayı ve üstteki
     tarihi güncelleriz. Böyle bir değişiklik yayınlanmadan önce uygulamanın Google
     Play'deki Veri güvenliği bölümüne de yansıtılır.
   </p>
 
-  <h2>13. İletişim</h2>
+  <h2>15. İletişim</h2>
   <p>
     <span class="fill">Ufuk Mobil Uygulama Atölyesi</span><br>
     <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span><br>
@@ -540,6 +680,15 @@
           <td>Uygulama hatalarının tespiti ve giderilmesi</td>
           <td>Meşru menfaat — m. 5/2-f. Kapatma anahtarı yok, bkz. 4. bölüm.</td>
         </tr>
+        <tr>
+          <td>Reklam kimliği, IP adresi, cihaz ve uygulama bilgisi, reklam
+            etkileşimleri — yalnızca ödüllü reklam istendiğinde</td>
+          <td>Kullanıcının talep ettiği ödüllü reklamın sunulması ve ödülün (1 saatlik
+            Pro) verilmesi, reklamın ölçülmesi, sahtekârlığın önlenmesi</td>
+          <td>Sözleşmenin kurulması veya ifası — m. 5/2-c (ödül karşılığında reklam
+            izleme talebi). Reklamın kişiselleştirilmesi Google'ın kendi sorumluluğundadır,
+            bkz. 5. bölüm.</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -553,16 +702,18 @@
   <h3>Kişisel veri toplamanın yöntemi</h3>
   <p>
     Çökme verisi yalnızca otomatik yollarla, uygulamaya gömülü Firebase Crashlytics
-    yazılım geliştirme kiti aracılığıyla toplanır. Kullanıcıdan form, kayıt veya
+    yazılım geliştirme kiti aracılığıyla toplanır. Reklam verisi, yalnızca kullanıcı
+    ödüllü reklam istediğinde, uygulamaya gömülü Google Mobile Ads (AdMob) yazılım
+    geliştirme kiti aracılığıyla otomatik yollarla toplanır. Kullanıcıdan form, kayıt veya
     benzeri bir yolla veri istenmez; uygulamada hesap ve giriş bulunmamaktadır.
   </p>
 
   <h3>Aktarılan taraflar ve yurt dışına aktarım</h3>
   <p>
-    Çökme verisi Google Ireland Limited ve Google LLC'ye aktarılabilmektedir. Bu
-    şirketlerin sunucuları yurt dışında bulunduğundan, aktarım KVKK m. 9 anlamında
-    <strong>yurt dışına aktarım</strong> niteliğindedir. Android'in kendi cihaz
-    yedekleme özelliği (bkz. 5. bölüm) ayrıca sizin kendi Google hesabınıza
+    Çökme verisi ve reklam verisi Google Ireland Limited ve Google LLC'ye
+    aktarılabilmektedir. Bu şirketlerin sunucuları yurt dışında bulunduğundan, aktarım
+    KVKK m. 9 anlamında <strong>yurt dışına aktarım</strong> niteliğindedir. Android'in
+    kendi cihaz yedekleme özelliği (bkz. 7. bölüm) ayrıca sizin kendi Google hesabınıza
     yönelik bir platform işlevidir; bizim tarafımızdan yapılan veya erişilen bir
     aktarım değildir.
   </p>
@@ -585,7 +736,9 @@
   </ul>
   <p>
     Uygulamada hesap bulunmadığından sizi adınızla eşleştiremeyiz; çökme verisine
-    ilişkin taleplerde ilgili Firebase kurulum kimliğinin bildirilmesi gerekir.
+    ilişkin taleplerde ilgili Firebase kurulum kimliğinin bildirilmesi gerekir. Reklam
+    verisi bize ulaşmadığından, bu veriye ilişkin talepler için Google'ın kendi
+    araçlarını ve telefonunuzun reklam ayarlarını kullanabilirsiniz (bkz. 5. bölüm).
     Talepleriniz <span class="fill">ufukmobiluygulamaatolyesi@gmail.com</span>
     adresine iletilebilir; başvurular en geç <strong>otuz gün</strong> içinde
     sonuçlandırılır. Başvurunuzun reddedilmesi, verilen cevabı yetersiz bulmanız
