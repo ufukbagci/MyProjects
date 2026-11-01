@@ -138,16 +138,18 @@
   <h1>Privacy Policy</h1>
   <p class="meta">
     Bubble Level — Android app, package <code>com.ub.bubblelevel</code><br>
-    Last updated: <span class="fill">2026-10-08</span>
+    Last updated: <span class="fill">2026-11-01</span>
   </p>
 
   <div class="summary">
-    <p><strong>The short version.</strong> Bubble Level has no account and no ads, and it
-    never uses the advertising ID. Two things leave your device: anonymous
+    <p><strong>The short version.</strong> Bubble Level has no account, and there are no
+    ads while you measure. Two things leave your device: anonymous
     <strong>usage statistics</strong> (which features are used — never the angles you
     measure or the names you give them) and <strong>crash reports</strong>, both through
-    Google Firebase. Your saved measurements, settings and calibration stay in the app's
-    private storage on your device and are never transmitted by the app.</p>
+    Google Firebase. Only if you choose to watch an ad to unlock a Pro feature for one hour,
+    <strong>Google AdMob</strong> receives the data it needs to show that ad (section 6a).
+    Your saved measurements, settings and calibration stay in the app's private storage on
+    your device and are never transmitted by the app.</p>
   </div>
 
   <h2 id="delete">Deleting your data</h2>
@@ -174,10 +176,10 @@
   <h2>2. What we do not collect</h2>
   <ul>
     <li><strong>No account, no sign-in, no profile.</strong></li>
-    <li><strong>No advertising and no advertising ID.</strong> The app contains no ad SDK.
-      The advertising-ID permissions that Firebase would normally add are removed from the
-      app, advertising-ID collection is switched off and ad-personalisation signals are
-      disabled.</li>
+    <li><strong>No ads while you measure.</strong> The ad SDK (Google AdMob) is not started
+      when the app opens; it runs only if you tap "Unlock for 1 hour" in the Pro sheet
+      (section 6a). Firebase Analytics never collects the advertising ID, and
+      ad-personalisation signals are disabled for it.</li>
     <li>No camera, no location, no contacts, no microphone, no files outside the app's
       own storage. The app reads the device's motion sensors (accelerometer / gravity) to
       show the level; those readings are processed on the device and are never sent
@@ -199,6 +201,7 @@
         <tr><td>Preferences</td><td>Local storage (DataStore)</td><td>Unit, tolerance, decimals, theme and colours, sound / vibration / screen-on options, language</td></tr>
         <tr><td>Calibration</td><td>Local storage (DataStore)</td><td>Sensor offsets measured during calibration, calibration profile</td></tr>
         <tr><td>Review prompt counters</td><td>Local storage (DataStore)</td><td>How many measurements you have saved, how many distinct days you opened the app, when you were last asked to rate it</td></tr>
+        <tr><td>One-hour unlocks</td><td>Local storage (DataStore)</td><td>Which Pro feature you unlocked by watching an ad, and when that hour ends</td></tr>
       </tbody>
     </table>
   </div>
@@ -267,6 +270,28 @@
     unlocked.
   </p>
 
+  <h2 id="ads">6a. Optional rewarded ads</h2>
+  <p>
+    Instead of buying Pro, you can unlock a single Pro feature for one hour by watching an
+    ad. This is the only place the app shows ads, and only after you tap
+    "Unlock for 1 hour"; the measuring screens never show ads. The ads are served by
+    <strong>Google AdMob</strong>, which receives, as part of showing an ad: your device's
+    advertising ID and app set ID, IP address (from which an approximate location can be
+    derived), device and app information, and how you interacted with the ad. Google uses
+    this to deliver and measure ads, to prevent fraud and, where you allow it, to
+    personalise ads, under the
+    <a href="https://policies.google.com/technologies/partner-sites">Google partner-sites
+    policy</a> and the <a href="https://policies.google.com/privacy">Google Privacy
+    Policy</a>.
+  </p>
+  <p>
+    In the EEA, the UK and Switzerland, Google's consent form is shown before the first ad
+    is requested, and you can change your choice at any time under
+    <em>Settings → Ad privacy choices</em> in the app. Anywhere, you can reset or delete
+    your advertising ID in Android's own settings. If you never tap "Unlock for 1 hour",
+    the app sends nothing to AdMob.
+  </p>
+
   <h2>7. Android's own backup</h2>
   <p>
     The app allows Android's built-in backup (<code>allowBackup</code>), so if you have
@@ -291,17 +316,20 @@
       statistics and crash reports in sections 4 and 5, and talking to Google Play for
       purchases.</li>
     <li><code>BILLING</code> — Google Play purchases (section 6).</li>
+    <li><code>AD_ID</code> and Android's Privacy Sandbox ad permissions — added by Google
+      AdMob, used only for the optional rewarded ads (section 6a).</li>
   </ul>
   <p>The app does not request camera, location, contacts, microphone or storage permissions.</p>
 
   <h2>10. Children</h2>
   <p>
-    Bubble Level is suitable for all ages, including children. It has no account, no ads,
-    no chat and no way to share anything with other users, and it never asks for a name,
-    email address or any other personal information.
+    Bubble Level is suitable for all ages, including children. It has no account, no chat
+    and no way to share anything with other users, and it never asks for a name, email
+    address or any other personal information.
   </p>
   <ul>
-    <li>The advertising ID is never collected, and no ad SDK is included.</li>
+    <li>No ads are shown while measuring. An ad appears only if someone taps
+      "Unlock for 1 hour" in the Pro sheet and chooses to watch it (section 6a).</li>
     <li>The usage statistics and crash reports in sections 4 and 5 are pseudonymous, are
       never used for advertising or profiling, and do not identify who is using the app.</li>
     <li>Saved measurements, including any names given to them, stay on the device.</li>
@@ -323,7 +351,9 @@
     features are used and diagnosing faults in software we publish are narrow, expected
     purposes, and the data is pseudonymous and never used for advertising. For purchases
     (section 6), the basis is the <strong>performance of a contract</strong>
-    (Art. 6(1)(b)).
+    (Art. 6(1)(b)). For the optional rewarded ads (section 6a), the basis in the EEA, the
+    UK and Switzerland is your <strong>consent</strong> (Art. 6(1)(a)), collected through
+    Google's consent form and changeable under <em>Settings → Ad privacy choices</em>.
   </p>
   <p>
     The measurements, settings and calibration described in section 3 never reach us at
@@ -344,8 +374,11 @@
   <p>
     We do not sell personal information, and the data described in sections 4 and 5 is
     processed by Google as our service provider, on our behalf and under contract.
-    Nothing described in this policy qualifies as a "sale" or as "sharing for
-    cross-context behavioural advertising" under the CCPA/CPRA or similar state laws.
+    The optional rewarded ads in section 6a are the one exception: when you choose to
+    watch an ad, Google AdMob may use the data it receives for advertising, which some
+    state laws treat as "sharing for cross-context behavioural advertising". You can opt
+    out by not watching ads, and by resetting or deleting your advertising ID in Android's
+    settings.
   </p>
 
   <h2>13. Retention</h2>
@@ -356,6 +389,8 @@
       14 months, after which event-level data is deleted automatically.</li>
     <li><strong>Crash reports:</strong> retained by Firebase Crashlytics according to
       Google's own retention schedule (currently 90 days); we hold no independent copy.</li>
+    <li><strong>Ad data:</strong> retained by Google AdMob under Google's own retention
+      policies; we receive only aggregate ad revenue reports and no per-user data.</li>
   </ul>
 
   <h2>14. Security</h2>
@@ -389,15 +424,17 @@
   <h1>Gizlilik Politikası</h1>
   <p class="meta">
     Su Terazisi — Android uygulaması, paket <code>com.ub.bubblelevel</code><br>
-    Son güncelleme: <span class="fill">2026-10-08</span>
+    Son güncelleme: <span class="fill">2026-11-01</span>
   </p>
 
   <div class="summary">
-    <p><strong>Kısa hâli.</strong> Su Terazisi'nde hesap ve reklam yoktur; reklam kimliği
-    hiç kullanılmaz. Cihazınızdan iki şey çıkar: anonim <strong>kullanım
+    <p><strong>Kısa hâli.</strong> Su Terazisi'nde hesap yoktur ve ölçerken reklam
+    görmezsiniz. Cihazınızdan iki şey çıkar: anonim <strong>kullanım
     istatistikleri</strong> (hangi özelliklerin kullanıldığı — ölçtüğünüz açılar ya da
     verdiğiniz adlar asla) ve <strong>çökme raporları</strong>; ikisi de Google Firebase
-    üzerinden. Kaydettiğiniz ölçümler, ayarlarınız ve kalibrasyonunuz cihazınızdaki
+    üzerinden. Yalnızca bir Pro özelliğini bir saatliğine açmak için reklam izlemeyi
+    seçerseniz <strong>Google AdMob</strong> o reklamı göstermek için gereken verileri alır
+    (6a. bölüm). Kaydettiğiniz ölçümler, ayarlarınız ve kalibrasyonunuz cihazınızdaki
     uygulamaya özel depolamada kalır ve uygulama tarafından hiçbir zaman gönderilmez.</p>
   </div>
 
@@ -425,10 +462,10 @@
   <h2>2. Toplamadıklarımız</h2>
   <ul>
     <li><strong>Hesap, giriş veya profil yok.</strong></li>
-    <li><strong>Reklam ve reklam kimliği yok.</strong> Uygulamada reklam SDK'sı bulunmaz.
-      Firebase'in normalde eklediği reklam kimliği izinleri uygulamadan kaldırılmış,
-      reklam kimliği toplama kapatılmış ve reklam kişiselleştirme sinyalleri devre dışı
-      bırakılmıştır.</li>
+    <li><strong>Ölçerken reklam yok.</strong> Reklam SDK'sı (Google AdMob) uygulama
+      açılırken başlatılmaz; yalnızca Pro sayfasında "1 saatliğine kilidi aç"a
+      dokunursanız çalışır (6a. bölüm). Firebase Analytics reklam kimliğini hiçbir zaman
+      toplamaz ve onun için reklam kişiselleştirme sinyalleri devre dışıdır.</li>
     <li>Kamera, konum, kişiler, mikrofon veya uygulamanın kendi deposu dışında dosya
       erişimi yoktur. Uygulama, teraziyi gösterebilmek için cihazın hareket sensörlerini
       (ivmeölçer / yerçekimi) okur; bu değerler cihazda işlenir ve hiçbir yere
@@ -450,6 +487,7 @@
         <tr><td>Tercihler</td><td>Yerel depolama (DataStore)</td><td>Birim, tolerans, ondalık, tema ve renkler, ses / titreşim / ekranı açık tutma seçenekleri, dil</td></tr>
         <tr><td>Kalibrasyon</td><td>Yerel depolama (DataStore)</td><td>Kalibrasyonda ölçülen sensör sapmaları, kalibrasyon profili</td></tr>
         <tr><td>Değerlendirme sayaçları</td><td>Yerel depolama (DataStore)</td><td>Kaç ölçüm kaydettiğiniz, kaç farklı gün uygulamayı açtığınız, en son ne zaman değerlendirme istendiği</td></tr>
+        <tr><td>Bir saatlik kilit açmalar</td><td>Yerel depolama (DataStore)</td><td>Reklam izleyerek hangi Pro özelliğini açtığınız ve o saatin ne zaman bittiği</td></tr>
       </tbody>
     </table>
   </div>
@@ -519,6 +557,28 @@
     satın alınıp alınmadığını sorar.
   </p>
 
+  <h2 id="reklam">6a. İsteğe bağlı ödüllü reklam</h2>
+  <p>
+    Pro'yu satın almak yerine bir reklam izleyerek tek bir Pro özelliğini bir saatliğine
+    açabilirsiniz. Uygulamanın reklam gösterdiği tek yer burasıdır ve yalnızca
+    "1 saatliğine kilidi aç"a dokunduktan sonra; ölçüm ekranlarında reklam gösterilmez.
+    Reklamları <strong>Google AdMob</strong> sunar ve bir reklamı gösterirken şunları alır:
+    cihazınızın reklam kimliği ve uygulama grubu kimliği (app set ID), IP adresi (yaklaşık
+    konum bundan türetilebilir), cihaz ve uygulama bilgileri ve reklamla etkileşiminiz.
+    Google bunları reklamı sunmak ve ölçmek, sahtekârlığı önlemek ve izin verdiğiniz
+    ölçüde reklamları kişiselleştirmek için
+    <a href="https://policies.google.com/technologies/partner-sites">Google iş ortağı
+    siteleri politikası</a> ve <a href="https://policies.google.com/privacy">Google Gizlilik
+    Politikası</a> çerçevesinde kullanır.
+  </p>
+  <p>
+    AEA, Birleşik Krallık ve İsviçre'de ilk reklam istenmeden önce Google'ın izin formu
+    gösterilir; seçiminizi uygulamada <em>Ayarlar → Reklam gizlilik seçenekleri</em>
+    altından istediğiniz zaman değiştirebilirsiniz. Her yerde reklam kimliğinizi
+    Android'in kendi ayarlarından sıfırlayabilir ya da silebilirsiniz. "1 saatliğine kilidi
+    aç"a hiç dokunmazsanız uygulama AdMob'a hiçbir şey göndermez.
+  </p>
+
   <h2>7. Android'in kendi yedeklemesi</h2>
   <p>
     Uygulama Android'in yerleşik yedeklemesine (<code>allowBackup</code>) izin verir;
@@ -544,17 +604,20 @@
       istatistik ve çökme raporlarının gönderilmesi ve satın alma için Google Play ile
       iletişim.</li>
     <li><code>BILLING</code> — Google Play satın almaları (6. bölüm).</li>
+    <li><code>AD_ID</code> ve Android'in Privacy Sandbox reklam izinleri — Google AdMob
+      tarafından eklenir, yalnızca isteğe bağlı ödüllü reklam için kullanılır (6a. bölüm).</li>
   </ul>
   <p>Uygulama kamera, konum, kişiler, mikrofon veya depolama izni istemez.</p>
 
   <h2>10. Çocuklar</h2>
   <p>
-    Su Terazisi, çocuklar dahil her yaşa uygundur. Uygulamada hesap, reklam, sohbet ya da
-    başka kullanıcılarla paylaşım yoktur; ad, e-posta adresi veya başka bir kişisel bilgi
+    Su Terazisi, çocuklar dahil her yaşa uygundur. Uygulamada hesap, sohbet ya da başka
+    kullanıcılarla paylaşım yoktur; ad, e-posta adresi veya başka bir kişisel bilgi
     hiçbir zaman istenmez.
   </p>
   <ul>
-    <li>Reklam kimliği hiçbir zaman toplanmaz; uygulamada reklam SDK'sı yoktur.</li>
+    <li>Ölçerken reklam gösterilmez. Reklam yalnızca biri Pro sayfasında "1 saatliğine
+      kilidi aç"a dokunup izlemeyi seçerse çıkar (6a. bölüm).</li>
     <li>4. ve 5. bölümlerdeki kullanım istatistikleri ve çökme raporları takma adlıdır,
       reklam ya da profil oluşturma için asla kullanılmaz ve uygulamayı kimin kullandığını
       belirlemez.</li>
@@ -576,7 +639,10 @@
     <strong>meşru menfaate</strong> (GDPR m. 6(1)(f)) dayanırız: hangi özelliklerin
     kullanıldığını anlamak ve yayımladığımız yazılımdaki hataları teşhis etmek dar ve
     beklenen amaçlardır; veriler takma adlıdır ve reklam için asla kullanılmaz. Satın alma
-    (6. bölüm) için dayanak <strong>sözleşmenin ifasıdır</strong> (m. 6(1)(b)).
+    (6. bölüm) için dayanak <strong>sözleşmenin ifasıdır</strong> (m. 6(1)(b)). İsteğe
+    bağlı ödüllü reklam (6a. bölüm) için AEA, Birleşik Krallık ve İsviçre'de dayanak,
+    Google'ın izin formuyla alınan ve <em>Ayarlar → Reklam gizlilik seçenekleri</em>
+    altından değiştirilebilen <strong>açık rızanızdır</strong> (m. 6(1)(a)).
   </p>
   <p>
     3. bölümde anlatılan ölçümler, ayarlar ve kalibrasyon bize hiç ulaşmaz — yalnızca
@@ -596,9 +662,12 @@
   <h2>12. Kaliforniya ve diğer ABD eyaletleri sakinleri</h2>
   <p>
     Kişisel bilgi satmayız; 4. ve 5. bölümlerde anlatılan veriler Google tarafından
-    hizmet sağlayıcımız sıfatıyla, bizim adımıza ve sözleşmeye dayalı olarak işlenir. Bu
-    politikada anlatılan hiçbir şey CCPA/CPRA veya benzeri eyalet yasaları kapsamında
-    "satış" ya da "bağlamlar arası davranışsal reklam için paylaşım" niteliği taşımaz.
+    hizmet sağlayıcımız sıfatıyla, bizim adımıza ve sözleşmeye dayalı olarak işlenir.
+    Tek istisna 6a. bölümdeki isteğe bağlı ödüllü reklamdır: reklam izlemeyi seçtiğinizde
+    Google AdMob aldığı verileri reklam için kullanabilir; bazı eyalet yasaları bunu
+    "bağlamlar arası davranışsal reklam için paylaşım" sayar. Reklam izlemeyerek ve
+    reklam kimliğinizi Android ayarlarından sıfırlayarak ya da silerek bunu
+    engelleyebilirsiniz.
   </p>
 
   <h2>13. Saklama süreleri</h2>
@@ -609,6 +678,9 @@
       tutulur; ardından olay düzeyindeki veriler otomatik olarak silinir.</li>
     <li><strong>Çökme raporları:</strong> Firebase Crashlytics tarafından Google'ın kendi
       saklama takvimine göre (şu an 90 gün) tutulur; bizde ayrı bir kopyası yoktur.</li>
+    <li><strong>Reklam verileri:</strong> Google AdMob tarafından Google'ın kendi saklama
+      politikalarına göre tutulur; bize yalnızca toplu reklam geliri raporları ulaşır,
+      kullanıcı bazında veri ulaşmaz.</li>
   </ul>
 
   <h2>14. Güvenlik</h2>
@@ -672,6 +744,15 @@
           <td>Satın alınan özelliklerin açılması</td>
           <td>Sözleşmenin ifası — m. 5/2-c.</td>
         </tr>
+        <tr>
+          <td>Yalnızca kullanıcı "1 saatliğine kilidi aç"ı seçerse: reklam kimliği, uygulama
+            grubu kimliği, IP adresi, cihaz ve uygulama bilgileri, reklam etkileşimi
+            (Google AdMob)</td>
+          <td>İsteğe bağlı ödüllü reklamın gösterilmesi ve karşılığında bir Pro özelliğinin
+            bir saatliğine açılması</td>
+          <td>Açık rıza — m. 5/1 (reklamı izlemeyi seçmek; AEA/Birleşik Krallık'ta ayrıca
+            Google'ın izin formu), bkz. 6a. bölüm.</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -687,13 +768,15 @@
     Kullanım ve çökme verileri yalnızca otomatik yollarla, uygulamaya gömülü Firebase
     Analytics ve Firebase Crashlytics yazılım geliştirme kitleri aracılığıyla toplanır.
     Satın alma durumu Google Play Faturalandırma kütüphanesi aracılığıyla Google Play'den
-    sorgulanır. Kullanıcıdan form, kayıt veya benzeri bir yolla veri istenmez;
+    sorgulanır. Reklam verileri yalnızca kullanıcı ödüllü reklamı izlemeyi seçtiğinde,
+    Google Mobile Ads (AdMob) yazılım geliştirme kiti aracılığıyla toplanır. Kullanıcıdan form, kayıt veya benzeri bir yolla veri istenmez;
     uygulamada hesap ve giriş bulunmamaktadır.
   </p>
 
   <h3>Aktarılan taraflar ve yurt dışına aktarım</h3>
   <p>
-    Kullanım ve çökme verileri Google Ireland Limited ve Google LLC'ye aktarılabilmektedir.
+    Kullanım ve çökme verileri ile (yalnızca ödüllü reklam izlendiğinde) reklam verileri
+    Google Ireland Limited ve Google LLC'ye aktarılabilmektedir.
     Bu şirketlerin sunucuları yurt dışında bulunduğundan, aktarım KVKK m. 9 anlamında
     <strong>yurt dışına aktarım</strong> niteliğindedir. Android'in kendi cihaz
     yedekleme özelliği (bkz. 7. bölüm) ayrıca sizin kendi Google hesabınıza
